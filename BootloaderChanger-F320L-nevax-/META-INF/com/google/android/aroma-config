@@ -8,7 +8,7 @@ ini_set("rom_name", "Bootloader Changer");
 ini_set("rom_version", "2.1.1");
 ini_set("rom_author", "Nevax - xda@NevaX1");
 ini_set("rom_device", "F320L");
-ini_set("rom_date", "12th August 2015");
+ini_set("rom_date", "13th August 2015");
 
 #Font
 fontresload("0", "ttf/Roboto-Regular.ttf", "13");
@@ -93,12 +93,12 @@ endif;
 #Welcome
 viewbox(
 	"<~welcome.title>",
-	"<~welcome.text1> <b>" 
-	 + ini_get("rom_name") 
-	 + " " 
-	 + ini_get("rom_version") 
-	 + "</b> <~by> <b>" 
-	 + ini_get("rom_author") 
+	"<~welcome.text1> <b>"
+	 + ini_get("rom_name")
+	 + " "
+	 + ini_get("rom_version")
+	 + "</b> <~by> <b>"
+	 + ini_get("rom_author")
 	 + "</b>.\n\n\n\n" +
 
 	"<~sys.title>\n\n" +
@@ -143,7 +143,7 @@ if prop("menu.prop", "selected")=="3" then
 		"<~sys.info.lcd>\t\t: <b><#selectbg_g>" + sysprop("ro.sf.lcd_density") + "</#></b>\n\n" +
 
 		"<~sys.info.storage>\t\t: <b><#selectbg_g>" + getdisksize("/system", "m") + " MB</#></b>\n" +
-			"\t\t<~sys.info.storage.free>\t\t: <b><#selectbg_g>" + getdiskfree("/system", "m") + " MB</#></b>\n\n" 
+			"\t\t<~sys.info.storage.free>\t\t: <b><#selectbg_g>" + getdiskfree("/system", "m") + " MB</#></b>\n\n"
 		);
 
 	textbox(
@@ -213,7 +213,7 @@ checkbox(
 	"update",
 	"rcvr.prop",
   	"Recovery", "", 2,
-    "<~rcv1>", "<~rcv2>", 1     
+    "<~rcv1>", "<~rcv2>", 1
 );
 
 #PreInstall
