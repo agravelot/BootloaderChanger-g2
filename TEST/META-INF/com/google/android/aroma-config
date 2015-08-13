@@ -129,11 +129,11 @@ menubox(
 );
 
 #Bootloader Manager
-if prop("manager.prop", "selected")=="2" then
+if prop("menu.prop", "selected")=="2" then
 	menubox(
     "<~main.manager>,
     @install",
-    "menu2.prop",
+    "manager.prop",
     	"<b><~manager.check></b>", "<~main.check.info>", "@install",
       "<b><~manager.backup></b>", "<~main.backup.info>", "@install",
       "<b><~manager.restore></b>", "<~main.restore.info>", "@install",
@@ -144,17 +144,30 @@ endif;
 
 
 if prop("manager.prop", "selected")=="1" then
-
-
+install(
+	"<~install>",
+	"<b>" + ini_get("rom_name") + "</b> is being installed.\n\n" +
+	"@install",
+	"<~install.finish>"
+);
 endif;
 
 if prop("manager.prop", "selected")=="2" then
-
-
+install(
+	"<~install>",
+	"<b>" + ini_get("rom_name") + "</b> is being installed.\n\n" +
+	"@install",
+	"<~install.finish>"
+);
 endif;
 
 if prop("manager.prop", "selected")=="3" then
-
+install(
+	"<~install>",
+	"<b>" + ini_get("rom_name") + "</b> is being installed.\n\n" +
+	"@install",
+	"<~install.finish>"
+);
 endif;
 
 #System Info
@@ -284,5 +297,4 @@ if
 	getvar("reboot_it")=="1"
 then
 	reboot("onfinish");
-  unmount("/system");
 endif;

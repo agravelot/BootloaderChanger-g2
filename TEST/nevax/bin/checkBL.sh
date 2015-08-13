@@ -46,11 +46,8 @@
 # JB
 # KK
 # LP
-mount("ext4", "EMMC", "/dev/block/platform/msm_sdcc.1/by-name/system", "/system");
-package_extract_dir("nevax/bin", "/tmp");
-set_metadata_recursive("/tmp", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644);
-run_program("/temp/checkBL.sh");
-umount ("/system");
+
+
 
 if [ busybox md5sum /dev/block/platform/msm_sdcc.1/by-name/aboot = 2cc5aa29820be17bcc3427c16456057b aboot]; then
   mkdir /sdcard/nevax/ok
