@@ -1,0 +1,40 @@
+2.0.3.3
+Support Russian language xda@LidaFlorida - HAZE666
+
+2.0.3.2
+Support Spanish language xda@shakeb4use
+
+2.0.3.1
+Support Czech language xda@k0s&n
+
+2.0.3
+Add new variants (d800,d801,vs980) -- ls980 soon ;)
+Fix some typo french
+
+2.0.2
+Add Portuguese translation / Thx xda@Rayaxe
+Fix font size for some peoples
+
+2.0
+Add multilanguage (french & english)
+Remove SysInfo ExtSD
+Remove Choose vriant Step in AROMA
+Delete useless LP files
+Add Splash
+Add Guide 
+
+1.2.1
+Update recovery to TWRP 2.8.6.1>2.8.7.1 "Make sure you have newest Theme (or no theme)."
+d802 - Change bootloader file for kk (bin>img)
+
+1.2       
+Improvement of the loading bar
+
+1.1.1  
+Check box "Reboot the phone" unchecked by default to avoid mistakes.
+
+1.1    
+Fix for KK & JB
+
+1.0    
+First release

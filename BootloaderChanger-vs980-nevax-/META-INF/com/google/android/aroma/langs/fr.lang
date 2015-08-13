@@ -1,0 +1,85 @@
+﻿#########################################################
+#	Bootloader Changer language file
+#
+#	English by: Nevax
+#   
+#     
+#  
+
+text_ok=OK
+text_next=Suivant
+text_back=Retour
+text_yes=Oui
+text_no=Non
+text_about=Information
+text_quit=Quitter l'installation
+text_quit_msg=Êtes-vous sûr de vouloir quitter Bootloader Changer ?
+
+welcome.title=Bienvenue
+welcome.text1=Vous êtes sur le point d'utiliser 
+welcome.version=VERSION
+welcome.codename=CODENAME
+welcome.updated=Date MAJ
+welcome.next=Presser suivant pour continuer l'installation...
+
+changelog.title=Changelogs
+changelog.desc=Bootloader Changer Changelogs
+language.title=Selection de la langue
+language.text=Sélectionner le language à utiliser
+language.english=English
+language.english.info=Using English
+language.french=France
+language.french.info=Utiliser le Français
+welcome.microblog=Youtube
+rom.data=17 Juillet 2015
+text_finish=Terminer
+model.title=Modèle
+
+by=par
+
+main.tittle=Selectionner un menu pour poursuivre l'installation
+main.install=Installer
+main.install.info=Continuer l'installation
+main.sys=Information système
+main.sys.info=Montrer les informations système
+main.changelog.info=Bootloader Changer changelogs
+main.exit=Quitter
+main.exit.info=Quitter l'installateur Bootloader Changer
+main.guide=Quel bootloader dois-je prendre ?
+main.guide.info=Micro guide
+
+sys.title=Information sur Bootloader Changer 
+sys.info.wait=Récupération des information système...
+sys.info.title=Information système
+sys.info.title2=Vos informations système.
+sys.info.model=Modèle
+sys.info.name=Nom
+sys.info.manu=Fabricant
+sys.info.cpu=CPU
+sys.info.lcd=Densité LCD
+sys.info.storage=Taille mémoire
+sys.info.storage.free=Libre
+
+bl.tittle=Variante du Bootloader
+bl.title2=Sélectionné la varainte du bootloader.
+
+rcv.tittle=Installation du recovery TWRP Bumpé!
+rcv.tittle2=Recovery par blastagator
+rcv1=Installer TWRP Bumpé!
+rcv2=Il est important d'avoir un recovery à jour.
+
+pre.install.title=Prêt pour installation
+pre.install=L'outil est prêt pour l'installation.
+pre.install2=Appuyer <b>Installer Maintenant</b> pour débuter l'installation.
+pre.install3=Si vous souhaitez vérifier ou modifier vos paramètres d'installation, appuyer sur <b>Retour</b>.
+
+install=Installation
+install.now=Installer Maintenant
+install.finish=L'outil d'installation a correctement installé Bootloader Changer sur votre G2. Appuyer sur Suivant pour continer.
+install.finish.title=L'installation est terminé.
+installing.title=Installation...
+finish.title=Félicitation!
+finish.msg=Bootloader Changer a été correctement installé sur votre G2.
+finish.msg2=N'oublié pas de redemarrer votre recovery pour flash une nouvelle rom !
+finish.status=Résultat d'installation : 
+finish.reboot=Redémarrer votre périphérique maintenant.
