@@ -7,7 +7,9 @@ ui_print(" ");
 
 
 
-if (file_getprop("/tmp/aroma/bootloader.prop", "selected.1")=="1") then 
+if 
+	(file_getprop("/tmp/aroma/bootloader.prop", "selected.1")=="1") 
+then 
 	ui_print("Flash JB Bootloader..");
 	ui_print("   Patch Bootloader");
 	package_extract_file("nevax/JB/aboot.bin", "/dev/block/platform/msm_sdcc.1/by-name/aboot");
@@ -26,6 +28,12 @@ if (file_getprop("/tmp/aroma/bootloader.prop", "selected.1")=="1") then
 	set_progress(0.65);
 	package_extract_file("nevax/JB/dbi.bin", "/dev/block/platform/msm_sdcc.1/by-name/dbi");
 	set_progress(0.70);
+	if 
+		(file_getprop("/tmp/aroma/bootloader.prop", "selected.2")=="1") 
+	then
+		ui_print("Installing JB Modem...");
+		package_extract_file("nevax/JB/modem.bin", "/dev/block/platform/msm_sdcc.1/by-name/modem");
+	endif;
 endif;
 
 if 
@@ -33,21 +41,90 @@ if
 then 
 	ui_print("Flash KK Bootloader..");
 	ui_print("   Patch Bootloader");
-	package_extract_file("nevax/KK/aboot.img", "/dev/block/platform/msm_sdcc.1/by-name/aboot");
+	package_extract_file("nevax/KK/aboot.bin", "/dev/block/platform/msm_sdcc.1/by-name/aboot");
 	set_progress(0.20);
 	ui_print("   Patch Download Mode");
-	package_extract_file("nevax/KK/laf.img", "/dev/block/platform/msm_sdcc.1/by-name/laf");
+	package_extract_file("nevax/KK/laf.bin", "/dev/block/platform/msm_sdcc.1/by-name/laf");
 	set_progress(0.30);
-	ui_print("   Patch Bootstack");
-	package_extract_file("nevax/KK/persist.img", "/dev/block/platform/msm_sdcc.1/by-name/persist");
+	ui_print("   Patch Bootstacks");
+	package_extract_file("nevax/KK/persist.bin", "/dev/block/platform/msm_sdcc.1/by-name/persist");
 	set_progress(0.37);
-	package_extract_file("nevax/KK/rpm.img", "/dev/block/platform/msm_sdcc.1/by-name/rpm");
+	package_extract_file("nevax/KK/rpm.bin", "/dev/block/platform/msm_sdcc.1/by-name/rpm");
 	set_progress(0.47);
-	package_extract_file("nevax/KK/sbl1.img", "/dev/block/platform/msm_sdcc.1/by-name/sbl1");
+	package_extract_file("nevax/KK/sbl1.bin", "/dev/block/platform/msm_sdcc.1/by-name/sbl1");
 	set_progress(0.57);
-	package_extract_file("nevax/KK/tz.img", "/dev/block/platform/msm_sdcc.1/by-name/tz");
+	package_extract_file("nevax/KK/tz.bin", "/dev/block/platform/msm_sdcc.1/by-name/tz");
 	set_progress(0.65);
-	package_extract_file("nevax/KK/dbi.img", "/dev/block/platform/msm_sdcc.1/by-name/dbi");
+	package_extract_file("nevax/KK/dbi.bin", "/dev/block/platform/msm_sdcc.1/by-name/dbi");
+	set_progress(0.70);
+endif;
+
+if 
+	(file_getprop("/tmp/aroma/bootloader.prop", "selected.1")=="3") 
+then 
+	ui_print("Flash Original LP Bootloader..");
+	ui_print("   Patch Bootloader");
+	package_extract_file("nevax/LP/aboot.bin", "/dev/block/platform/msm_sdcc.1/by-name/aboot");
+	set_progress(0.20);
+	ui_print("   Patch Download Mode");
+	package_extract_file("nevax/LP/laf.bin", "/dev/block/platform/msm_sdcc.1/by-name/laf");
+	set_progress(0.30);
+	ui_print("   Patch Bootstacks");
+	package_extract_file("nevax/LP/persist.bin", "/dev/block/platform/msm_sdcc.1/by-name/persist");
+	set_progress(0.37);
+	package_extract_file("nevax/LP/rpm.bin", "/dev/block/platform/msm_sdcc.1/by-name/rpm");
+	set_progress(0.47);
+	package_extract_file("nevax/LP/sbl1.bin", "/dev/block/platform/msm_sdcc.1/by-name/sbl1");
+	set_progress(0.57);
+	package_extract_file("nevax/LP/tz.bin", "/dev/block/platform/msm_sdcc.1/by-name/tz");
+	set_progress(0.65);
+	package_extract_file("nevax/LP/dbi.bin", "/dev/block/platform/msm_sdcc.1/by-name/dbi");
+	set_progress(0.70);
+endif;
+
+if 
+	(file_getprop("/tmp/aroma/bootloader.prop", "selected.1")=="4") 
+then 
+	ui_print("Flash LP Loki Bootloader..");
+	ui_print("   Patch Bootloader");
+	package_extract_file("nevax/JB/aboot.bin", "/dev/block/platform/msm_sdcc.1/by-name/aboot");
+	set_progress(0.20);
+	ui_print("   Patch Download Mode");
+	package_extract_file("nevax/JB/laf.bin", "/dev/block/platform/msm_sdcc.1/by-name/laf");
+	set_progress(0.30);
+	ui_print("   Patch Bootstacks");
+	package_extract_file("nevax/LP/persist.bin", "/dev/block/platform/msm_sdcc.1/by-name/persist");
+	set_progress(0.37);
+	package_extract_file("nevax/LP/rpm.bin", "/dev/block/platform/msm_sdcc.1/by-name/rpm");
+	set_progress(0.47);
+	package_extract_file("nevax/LP/sbl1.bin", "/dev/block/platform/msm_sdcc.1/by-name/sbl1");
+	set_progress(0.57);
+	package_extract_file("nevax/LP/tz.bin", "/dev/block/platform/msm_sdcc.1/by-name/tz");
+	set_progress(0.65);
+	package_extract_file("nevax/LP/dbi.bin", "/dev/block/platform/msm_sdcc.1/by-name/dbi");
+	set_progress(0.70);
+endif;
+
+if 
+	(file_getprop("/tmp/aroma/bootloader.prop", "selected.1")=="5") 
+then 
+	ui_print("Flash LP Bumped Bootloader..");
+	ui_print("   Patch Bootloader");
+	package_extract_file("nevax/KK/aboot.bin", "/dev/block/platform/msm_sdcc.1/by-name/aboot");
+	set_progress(0.20);
+	ui_print("   Patch Download Mode");
+	package_extract_file("nevax/KK/laf.bin", "/dev/block/platform/msm_sdcc.1/by-name/laf");
+	set_progress(0.30);
+	ui_print("   Patch Bootstacks");
+	package_extract_file("nevax/LP/persist.bin", "/dev/block/platform/msm_sdcc.1/by-name/persist");
+	set_progress(0.37);
+	package_extract_file("nevax/LP/rpm.bin", "/dev/block/platform/msm_sdcc.1/by-name/rpm");
+	set_progress(0.47);
+	package_extract_file("nevax/LP/sbl1.bin", "/dev/block/platform/msm_sdcc.1/by-name/sbl1");
+	set_progress(0.57);
+	package_extract_file("nevax/LP/tz.bin", "/dev/block/platform/msm_sdcc.1/by-name/tz");
+	set_progress(0.65);
+	package_extract_file("nevax/LP/dbi.bin", "/dev/block/platform/msm_sdcc.1/by-name/dbi");
 	set_progress(0.70);
 endif;
 

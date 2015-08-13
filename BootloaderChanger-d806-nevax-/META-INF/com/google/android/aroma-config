@@ -5,10 +5,10 @@ loadlang("langs/en.lang");
 
 #MOD Info
 ini_set("rom_name", "Bootloader Changer");
-ini_set("rom_version", "2.0.4");
-ini_set("rom_author", "Nevax");
-ini_set("rom_device", "D806");
-ini_set("rom_date", "<~rom.data>");
+ini_set("rom_version", "2.1.1");
+ini_set("rom_author", "Nevax - xda@NevaX1");
+ini_set("rom_device", "D800");
+ini_set("rom_date", "12th August 2015");
 
 #Font
 fontresload("0", "ttf/Roboto-Regular.ttf", "13");
@@ -46,7 +46,10 @@ selectbox(
     "<~language.portuguese>", "<~language.portuguese.info> xda@Rayaxe", 0,
 	"<~language.czech>", "<~language.czech.info> xda@k0s&n", 0,
 	"<~language.es>", "<~language.es.info> xda@shakeb4use", 0,
-	"<~language.russian>", "<~language.russian.info> xda@LidaFlorida - HAZE666", 0
+	"<~language.russian>", "<~language.russian.info> xda@LidaFlorida - HAZE666", 0,
+	"<~language.italian>", "<~language.italian.info> xda@kRel", 0,
+	"<~language.serbia>", "<~language.serbia.info> xda@Brontok xda@Gradjevinac", 0,
+	"<~language.croatia>", "<~language.croatia.info> xda@The Marionette", 0
     );
 
 # SET LANGUAGE
@@ -74,6 +77,18 @@ if prop("language.prop","selected.0")=="6" then
   loadlang("langs/ru.lang");
 endif;
 
+if prop("language.prop","selected.0")=="7" then
+  loadlang("langs/it.lang");
+endif;
+
+if prop("language.prop","selected.0")=="8" then
+  loadlang("langs/se.lang");
+endif;
+
+if prop("language.prop","selected.0")=="9" then
+  loadlang("langs/cr.lang");
+endif;
+
 
 #Welcome
 viewbox(
@@ -88,10 +103,10 @@ viewbox(
 
 	"<~sys.title>\n\n" +
 
-	  "  <~welcome.version>\t:\t<b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
+	  "  <~welcome.version>\t\t:\t<b><#selectbg_g>"+ini_get("rom_version")+"</#></b>\n"+
       "  <~welcome.codename>\t:\t<b><#selectbg_g>"+ini_get("rom_author")+"</#></b>\n"+
-      "  <~welcome.microblog>\t\t:\t<b><#selectbg_g>youtube.com/nevaxtuto</#></b>\n"+
-      "  <~welcome.updated>\t:\t<b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n"+
+      "  <~welcome.microblog>\t\t:\t<b><#selectbg_g>/nevaxtuto</#></b>\n"+
+      "  <~welcome.updated>\t\t:\t<b><#selectbg_g>"+ini_get("rom_date")+"</#></b>\n\n"+
       "  <~welcome.next>",
 
 	"@welcome"
@@ -183,8 +198,8 @@ selectbox(
 	"bootloader.prop",
 
 	"Bootloader", "", 2,
-		"JB", "Jellybean Bootloader", 0,
-		"KK", "KitKat Bootloader", 0
+		"JellyBean", "Jellybean Bootloader", 0,
+		"KitKat", "KitKat Bootloader", 0
 );
 
 #Recovery

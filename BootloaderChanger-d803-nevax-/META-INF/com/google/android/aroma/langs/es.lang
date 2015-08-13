@@ -1,0 +1,86 @@
+﻿#########################################################
+#       Bootloader Changer language file
+#
+#       Spanish by: shakeb4use
+#  
+#    
+#  
+ 
+text_ok=OK
+text_next=Siguiente
+text_back=Atrás
+text_yes=Sí
+text_no=No
+text_about=Acerca de
+text_calibrating=Herramientas de calibración
+text_quit=Salir de la instalación
+text_quit_msg=¿Estás seguro de que quieres salir del instalador?
+ 
+welcome.title=Bienvenido
+welcome.text1=Estás a punto de usar
+welcome.version=VERSIÓN
+welcome.codename=CODENAME
+welcome.updated=ACTUALIZADO
+welcome.next=Pulsa continuar para seguir con la instalación...
+ 
+changelog.title=Registro de cambios
+changelog.desc=Registro de cambios de Bootloader Changer
+language.title=Seleccionar lenguaje
+language.text=Selecciona el lenguaje de la instalación
+language.english=English
+language.english.info=Using English
+language.french=France
+language.french.info=Utiliser le Français
+welcome.microblog=Youtube
+rom.data=31 junio 2015
+text_finish=Finalizar
+model.title=Modelo de teléfono
+ 
+by=por
+ 
+main.tittle=Selecciona una opción en el menú inferior para comenzar la instalación
+main.install=Instalar
+main.install.info=Continuar instalando el mod
+main.sys=Información del Sistema
+main.sys.info=Mostrar la información del dispositivo
+main.changelog.info=Registro de cambios de Bootloader Changer
+main.exit=Salir
+main.exit.info=Salir de Bootloader Changer
+main.guide=¿Qué bootloader debería escoger?
+main.guide.info=Micro guía
+ 
+sys.title=Información de Bootloader Changer
+sys.info.wait=Obtener información del sistema...
+sys.info.title=Información del sistema
+sys.info.title2=Información del sistema de tu dispositivo
+sys.info.model=Modelo
+sys.info.name=Nombre
+sys.info.manu=Fabricante
+sys.info.cpu=CPU
+sys.info.lcd=Densidad LCD
+sys.info.storage=Tamaño de almacenamiento
+sys.info.storage.free=Libre
+ 
+bl.tittle=Variante del Bootloader
+bl.title2=Por favor, selecciona la variante del bootloader
+ 
+rcv.tittle=Instalar TWRP 2.8.7.1 recovery Bumped!
+rcv.tittle2=Recovery por blastagator
+rcv1=Instalar TWRP Bumped!
+rcv2=Es importante tener la última versión
+ 
+pre.install.title=Preparado para instalar
+pre.install=El asistente está listo para comenzar la instalación
+pre.install2=Pulsa <b>Instalar Ahora</b> para comenzar la instalación.
+pre.install3=Si quieres revisar o cambiar algo de la instalación, pulsa <b>Retroceder</b>.
+ 
+install=Instalando
+install.now=Instalar Ahora
+install.finish=El asistente de instalación ha instalado Bootloader Chnager en tu teléfono satisfactoriamente. Pulsa Siguiente para continuar.
+install.finish.title=La instalación se ha completado.
+installing.title=Instalando...
+finish.title=¡Felicidades!
+finish.msg=Bootloader Changer ha sido instalado con éxito en tu teléfono.
+finish.msg2=¡No olvides reiniciar el recovery si quieres flashear una ROM nueva!
+finish.status=Resultado de la instalación:
+finish.reboot=Reinicia tu dispositivo ahora.

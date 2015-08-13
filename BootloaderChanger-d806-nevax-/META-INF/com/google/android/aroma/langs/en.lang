@@ -39,6 +39,12 @@ language.es = Español
 language.es.info = Usando español
 language.russian=Русский
 language.russian.info=Использовать русский
+language.italian=Italiano
+language.italian.info=Utilizzare l'Italiano
+language.serbia=Srpski
+language.serbia.info=Koristi se srpski jezik
+language.croatia= Crotia 2
+language.croatia.info=Koristi se Hrvatski
 
 welcome.microblog=Youtube
 rom.data=21 July 2015
