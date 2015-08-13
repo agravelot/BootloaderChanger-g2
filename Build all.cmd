@@ -10,9 +10,9 @@ echo D802 :
 echo D803 :
 7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-d803-nevax-\BootloaderChanger-d803-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-d803-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 echo D805 :
-7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-d802-nevax-\BootloaderChanger-d805-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-d805-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
+7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-d805-nevax-\BootloaderChanger-d805-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-d805-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 echo D806 :
-7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-d802-nevax-\BootloaderChanger-d806-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-d806-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
+7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-d806-nevax-\BootloaderChanger-d806-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-d806-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 echo LS980:
 7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-ls980-nevax-\BootloaderChanger-ls980-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-ls980-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 echo VS980 :
