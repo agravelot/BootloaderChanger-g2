@@ -121,15 +121,28 @@ menubox(
 	"menu.prop",
 
 	"<b><~main.install></b>", "<~main.install.info>", "@install",
+  "<b><~main.manager></b>", "<~main.manager.info>", "@install",
 	"<b><~main.guide></b>", "<~main.guide.info>", "@confirm",
 	"<b><~main.sys></b>", "<~main.sys.info>", "@info",
 	"<b><~changelog.title></b>", "<~main.changelog.info>", "@update",
 	"<b><~main.exit></b>", "<~main.exit.info>", "@default"
 );
 
+#Bootloader Manager
+if prop("menu.prop", "selected")=="2" then
+	menubox(
+    "<~main.manager>,
+    @install",
+    "menu2.prop",
+    	"<b><~manager.check></b>", "<~main.check.info>", "@install",
+      "<b><~manager.backup></b>", "<~main.backup.info>", "@install",
+      "<b><~manager.restore></b>", "<~main.restore.info>", "@install",
+      "<b><~main.exit></b>", "<~main.exit.info>", "@default"
+
+  )
 
 #System Info
-if prop("menu.prop", "selected")=="3" then
+if prop("menu.prop", "selected")=="4" then
 	pleasewait("<~sys.info.wait>");
 	setvar(
 		"sysinfo",
@@ -158,7 +171,7 @@ endif;
 
 
 #Changelog
-if prop("menu.prop", "selected")=="4" then
+if prop("menu.prop", "selected")=="5" then
 	textdialog(
 		"Bootloader Changer changelog",
 		resread("changelog.txt"),
@@ -169,13 +182,13 @@ if prop("menu.prop", "selected")=="4" then
 endif;
 
 #Guide
-if prop("menu.prop", "selected")=="2" then
+if prop("menu.prop", "selected")=="3" then
 	splash(5000, "splash/guide");
 	back("1");
 endif;
 
 #Exit
-if prop("menu.prop", "selected")=="5" then
+if prop("menu.prop", "selected")=="6" then
 	if
 		confirm(
 			"<~main.exit>",
