@@ -1,6 +1,6 @@
 @echo off
 PATH=%PATH%;C:\Program Files\7-Zip
-set \p VERSION=Entrer la version :
+set /p VERSION=Entrer la version :
 echo D800 :
 7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-d800-nevax-\BootloaderChanger-d800-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-d800-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 echo D801 :
