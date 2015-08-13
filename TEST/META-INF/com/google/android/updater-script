@@ -5,9 +5,7 @@ ui_print("@              www.youtube.com/nevaxtuto ");
 ui_print("@              www.twitter.com/Nevax07 ");
 ui_print(" ");
 
-package_extract_dir("nevax/bin", "/tmp/bin");
-package_extract_dir("nevax/aroma", "/tmp/aroma");
-set_metadata_recursive("/tmp", "uid", 0, "gid", 0, "dmode", 0755, "fmode", 0644);
+
 
 if
 	(file_getprop("/tmp/aroma/menu.prop", "selected.1")=="1")
@@ -33,13 +31,6 @@ if
 			package_extract_file("nevax/JB/dbi.bin", "/dev/block/platform/msm_sdcc.1/by-name/dbi");
 			set_progress(0.70);
 		endif;
-
-			if
-				(file_getprop("/tmp/aroma/bootloader.prop", "selected.2")=="1")
-			then
-				ui_print("Installing JB Modem...");
-				package_extract_file("nevax/JB/modem.bin", "/dev/block/platform/msm_sdcc.1/by-name/modem");
-			endif;
 
 		if
 			(file_getprop("/tmp/aroma/bootloader.prop", "selected.1")=="2")
@@ -154,13 +145,15 @@ endif;
 if
 	file_getprop("/tmp/aroma/manager.prop", "item.1") == "1"
 then
+	package_extract_dir("nevax/bin", "/tmp/bin");
+	set_perm_recursive(0, 0, 0755, 0755, "/tmp/bin");
 	set_perm(0, 0, 0755, "/tmp/bin/checkBL.sh");
 	run_program("/tmp/bin/checkBL.sh");
 	unmount ("/system");
 	alert(
- "version.txt",
- read("/tmp/aroma-data/version.txt")
-);
+ 		"version.txt",
+ 		read("/tmp/aroma-data/version.txt")
+	);
 endif;
 
 if
