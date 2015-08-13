@@ -46,4 +46,5 @@
 # JB
 # KK
 # LP
-busybox md5sum /dev/block/platform/msm_sdcc.1/by-name/aboot
+aboot=busybox md5sum /dev/block/platform/msm_sdcc.1/by-name/aboot
+echo aboot
