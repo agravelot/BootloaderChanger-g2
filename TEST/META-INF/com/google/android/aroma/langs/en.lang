@@ -100,11 +100,11 @@ finish.msg2=Don't forget to reboot your recovery if want flash a new rom!
 finish.status=Installation result:
 finish.reboot=Reboot your device now.
 
-main.manager
-main.manager.info
-manager.check
-manager.check.info
-manager.backup
-manager.backup.info
-manager.restore
-manager.restore.info
+main.manager=Bootloader Manager
+main.manager.info=Backup Restore & More
+manager.check=Check version
+manager.check.info=Check version of actual bootloader.
+manager.backup=Backup
+manager.backup.info=Backup your current bootloader.
+manager.restore=Restore
+manager.restore.info=Restore a backup
