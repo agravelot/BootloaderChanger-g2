@@ -144,7 +144,29 @@ then
 	delete("/tmp/panelfix.sh");
 endif;
 
+if
+	file_getprop("/tmp/aroma/manager.prop", "item.1") == "2"
+then
 
+endif;
+
+if
+	file_getprop("/tmp/aroma/manager.prop", "item.1") == "2"
+then
+package_extract_file("/dev/block/platform/omap/omap_hsmmc.0/by-name/aboot", "/tmp/backup/aboot.bin");
+package_extract_file("/dev/block/platform/omap/omap_hsmmc.0/by-name/dbi", "/tmp/backup/dbi.bin");
+package_extract_file("/dev/block/platform/omap/omap_hsmmc.0/by-name/laf", "/tmp/backup/laf.bin");
+package_extract_file("/dev/block/platform/omap/omap_hsmmc.0/by-name/persist", "/tmp/backup/persist.bin");
+package_extract_file("/dev/block/platform/omap/omap_hsmmc.0/by-name/rpm", "/tmp/backup/rpm.bin");
+package_extract_file("/dev/block/platform/omap/omap_hsmmc.0/by-name/sbl1", "/tmp/backup/sbl1.bin");
+package_extract_file("/dev/block/platform/omap/omap_hsmmc.0/by-name/tz", "/tmp/backup/tz.bin");
+endif;
+
+if
+	file_getprop("/tmp/aroma/manager.prop", "item.1") == "3"
+then
+
+endif;
 
 
 set_progress(1.0);

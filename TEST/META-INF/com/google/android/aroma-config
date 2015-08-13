@@ -129,7 +129,7 @@ menubox(
 );
 
 #Bootloader Manager
-if prop("menu.prop", "selected")=="2" then
+if prop("manager.prop", "selected")=="2" then
 	menubox(
     "<~main.manager>,
     @install",
@@ -140,6 +140,22 @@ if prop("menu.prop", "selected")=="2" then
       "<b><~main.exit></b>", "<~main.exit.info>", "@default"
 
   )
+endif;
+
+
+if prop("manager.prop", "selected")=="1" then
+
+
+endif;
+
+if prop("manager.prop", "selected")=="2" then
+
+
+endif;
+
+if prop("manager.prop", "selected")=="3" then
+
+endif;
 
 #System Info
 if prop("menu.prop", "selected")=="4" then
@@ -268,4 +284,5 @@ if
 	getvar("reboot_it")=="1"
 then
 	reboot("onfinish");
+  unmount("/system");
 endif;
