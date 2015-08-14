@@ -1,5 +1,8 @@
 @echo off
 
+echo Delete old md5sum
+del /s *.wlx
+
 set VARIANT=d800
 
 set ANDROID=JB
