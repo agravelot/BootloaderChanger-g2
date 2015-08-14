@@ -44,12 +44,12 @@ selectbox(
     "<~language.french>", "<~language.french.info>", 0,
     "<~language.english>", "<~language.english.info>", 1,
     "<~language.portuguese>", "<~language.portuguese.info> xda@Rayaxe", 0,
-	"<~language.czech>", "<~language.czech.info> xda@k0s&n", 0,
-	"<~language.es>", "<~language.es.info> xda@shakeb4use", 0,
-	"<~language.russian>", "<~language.russian.info> xda@LidaFlorida - HAZE666", 0,
-	"<~language.italian>", "<~language.italian.info> xda@kRel", 0,
-	"<~language.serbia>", "<~language.serbia.info> xda@Brontok xda@Gradjevinac", 0,
-	"<~language.croatia>", "<~language.croatia.info> xda@The Marionette", 0
+	  "<~language.czech>", "<~language.czech.info> xda@k0s&n", 0,
+	  "<~language.es>", "<~language.es.info> xda@shakeb4use", 0,
+	  "<~language.russian>", "<~language.russian.info> xda@LidaFlorida - HAZE666", 0,
+	  "<~language.italian>", "<~language.italian.info> xda@kRel", 0,
+  	"<~language.serbia>", "<~language.serbia.info> xda@Brontok xda@Gradjevinac", 0,
+  	"<~language.croatia>", "<~language.croatia.info> xda@The Marionette", 0
     );
 
 # SET LANGUAGE
@@ -121,7 +121,6 @@ menubox(
 	"menu.prop",
 
 	"<b><~main.install></b>", "<~main.install.info>", "@install",
-  "<b><~main.manager></b>", "<~main.manager.info>", "@install",
 	"<b><~main.guide></b>", "<~main.guide.info>", "@confirm",
 	"<b><~main.sys></b>", "<~main.sys.info>", "@info",
 	"<b><~changelog.title></b>", "<~main.changelog.info>", "@update",
@@ -129,51 +128,8 @@ menubox(
 );
 
 
-#Bootloader Manager
-if prop("menu.prop", "selected")=="2" then
-	menubox(
-    "<~main.manager>",
-    "<~main.manager.info>",
-    "@apps",
-    "manager.prop",
-    	"<b><~manager.check></b>", "<~main.check.info>", "@install",
-      "<b><~manager.backup></b>", "<~main.backup.info>", "@install",
-      "<b><~manager.restore></b>", "<~main.restore.info>", "@install",
-      "<b><~main.exit></b>", "<~main.exit.info>", "@default"
-
-  );
-endif;
-
-
-if prop("manager.prop", "selected")=="1" then
-install(
-	"<~install>",
-	"<b>" + ini_get("rom_name") + "</b> is being installed.\n\n" +
-	"@apps",
-	"<~install.finish>"
-);
-endif;
-
-if prop("manager.prop", "selected")=="2" then
-install(
-	"<~install>",
-	"<b>" + ini_get("rom_name") + "</b> is being installed.\n\n" +
-	"@apps",
-	"<~install.finish>"
-);
-endif;
-
-if prop("manager.prop", "selected")=="3" then
-install(
-	"<~install>",
-	"<b>" + ini_get("rom_name") + "</b> is being installed.\n\n" +
-	"@apps",
-	"<~install.finish>"
-);
-endif;
-
 #System Info
-if prop("menu.prop", "selected")=="4" then
+if prop("menu.prop", "selected")=="3" then
 	pleasewait("<~sys.info.wait>");
 	setvar(
 		"sysinfo",
@@ -202,7 +158,7 @@ endif;
 
 
 #Changelog
-if prop("menu.prop", "selected")=="5" then
+if prop("menu.prop", "selected")=="4" then
 	textdialog(
 		"Bootloader Changer changelog",
 		resread("changelog.txt"),
@@ -213,13 +169,13 @@ if prop("menu.prop", "selected")=="5" then
 endif;
 
 #Guide
-if prop("menu.prop", "selected")=="3" then
+if prop("menu.prop", "selected")=="2" then
 	splash(5000, "splash/guide");
 	back("1");
 endif;
 
 #Exit
-if prop("menu.prop", "selected")=="6" then
+if prop("menu.prop", "selected")=="5" then
 	if
 		confirm(
 			"<~main.exit>",
