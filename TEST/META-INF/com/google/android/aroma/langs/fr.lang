@@ -2,9 +2,9 @@
 #	Bootloader Changer language file
 #
 #	English by: Nevax
-#   
-#     
-#  
+#
+#
+#
 
 text_ok=OK
 text_next=Suivant
@@ -16,7 +16,7 @@ text_quit=Quitter l'installation
 text_quit_msg=Êtes-vous sûr de vouloir quitter Bootloader Changer ?
 
 welcome.title=Bienvenue
-welcome.text1=Vous êtes sur le point d'utiliser 
+welcome.text1=Vous êtes sur le point d'utiliser
 welcome.version=VERSION
 welcome.codename=CODENAME
 welcome.updated=Date MAJ
@@ -48,7 +48,7 @@ main.exit.info=Quitter l'installateur Bootloader Changer
 main.guide=Quel bootloader dois-je prendre ?
 main.guide.info=Micro guide
 
-sys.title=Information sur Bootloader Changer 
+sys.title=Information sur Bootloader Changer
 sys.info.wait=Récupération des information système...
 sys.info.title=Information système
 sys.info.title2=Vos informations système.
@@ -81,5 +81,14 @@ installing.title=Installation...
 finish.title=Félicitation!
 finish.msg=Bootloader Changer a été correctement installé sur votre G2.
 finish.msg2=N'oublié pas de redemarrer votre recovery pour flash une nouvelle rom !
-finish.status=Résultat d'installation : 
+finish.status=Résultat d'installation :
 finish.reboot=Redémarrer votre périphérique maintenant.
+
+main.manager=Bootloader Manager
+main.manager.info=Sauvegarder, Réstaurer & plus
+manager.check=Verifié la version
+manager.check.info=Vérifié la version actuelle de votre bootloader.
+manager.backup=Sauvegarder
+manager.backup.info=Sauvegarder votre bootloader actuel.
+manager.restore=Restaurer
+manager.restore.info=Restaurer une sauvegarde de votre bootloader.
