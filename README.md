@@ -1,3 +1,5 @@
 # BootloaderChanger-g2
 
-Hello world :)
+Heelo world :)
+
+Language files  : BootloaderChanger-*variant*-nevax-\META-INF\com\google\android\aroma\langs
