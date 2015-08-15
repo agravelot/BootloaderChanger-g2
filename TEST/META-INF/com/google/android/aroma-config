@@ -56,7 +56,9 @@ selectbox(
   	"<~language.russian>", "<~language.russian.info> xda@LidaFlorida - HAZE666", 0,
   	"<~language.italian>", "<~language.italian.info> xda@kRel", 0,
   	"<~language.serbia>", "<~language.serbia.info> xda@Brontok xda@Gradjevinac", 0,
-	  "<~language.croatia>", "<~language.croatia.info> xda@The Marionette", 0
+	"<~language.croatia>", "<~language.croatia.info> xda@The Marionette", 0,
+	"<~language.turkish>", "<~language.turkish.info> xda@iko11 ", 0
+	 
     );
 
 # SET LANGUAGE
@@ -94,6 +96,10 @@ endif;
 
 if prop("language.prop","selected.0")=="9" then
   loadlang("langs/cr.lang");
+endif;
+
+if prop("language.prop","selected.0")=="10" then
+  loadlang("langs/tr.lang");
 endif;
 
 
