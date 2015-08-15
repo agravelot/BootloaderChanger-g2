@@ -6,66 +6,65 @@ set VARIANT=d800
 echo %VARIANT% :
 7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-%VARIANT%-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 ping 127.0.0.1 -n 6 > nul
-md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.md5"
+md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip.md5"
 
-PAUSE
 set VARIANT=d801
 echo %VARIANT% :
 7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-%VARIANT%-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 ping 127.0.0.1 -n 6 > nul
-md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.md5"
+md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip.md5"
 
 set VARIANT=d802
 echo %VARIANT% :
 7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-%VARIANT%-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 ping 127.0.0.1 -n 6 > nul
-md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.md5"
+md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip.md5"
 
 set VARIANT=d803
 echo %VARIANT% :
 7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-%VARIANT%-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 ping 127.0.0.1 -n 6 > nul
-md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.md5"
+md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip.md5"
 
 set VARIANT=d805
 echo %VARIANT% :
 7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-%VARIANT%-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 ping 127.0.0.1 -n 6 > nul
-md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.md5"
+md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip.md5"
 
 set VARIANT=d806
 echo %VARIANT% :
 7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-%VARIANT%-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 ping 127.0.0.1 -n 6 > nul
-md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.md5"
+md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip.md5"
 
 set VARIANT=F320K
 echo %VARIANT% :
 7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-%VARIANT%-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 ping 127.0.0.1 -n 6 > nul
-md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.md5"
+md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip.md5"
 
 set VARIANT=F320L
 echo %VARIANT% :
 7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-%VARIANT%-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 ping 127.0.0.1 -n 6 > nul
-md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.md5"
+md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip.md5"
 
 set VARIANT=F320S
 echo %VARIANT% :
 7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-%VARIANT%-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 ping 127.0.0.1 -n 6 > nul
-md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.md5"
+md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip.md5"
 
 set VARIANT=LS980
 echo %VARIANT% :
 7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-%VARIANT%-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 ping 127.0.0.1 -n 6 > nul
-md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.md5"
+md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip.md5"
 
 set VARIANT=VS980
 echo %VARIANT% :
 7z a -r -tzip -mx9 "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" "%GITHUBDIR%\BootloaderChanger-%VARIANT%-nevax-\*" -xr!BootloaderChanger-*.* -xr!"-v- DOWNLOAD LATEST .ZIP FILE -v-"
 ping 127.0.0.1 -n 6 > nul
-md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.md5"
+md5.exe "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip" >> "%MEGADIR%\BootloaderChanger-%VARIANT%-nevax-\BootloaderChanger-%VARIANT%-nevax-%VERSION%.zip.md5"
 PAUSE
