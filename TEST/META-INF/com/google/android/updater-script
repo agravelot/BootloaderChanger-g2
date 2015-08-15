@@ -5,6 +5,26 @@ ui_print("@              www.youtube.com/nevaxtuto ");
 ui_print("@              www.twitter.com/Nevax07 ");
 ui_print(" ");
 
+;
+
+package_extract_dir("nevax/MD5", "/tmp/nevax/MD5");
+package_extract_dir("nevax/bin", "/tmp/nevax/bin");
+
+package_extract_file("nevax/bin/checkBump.sh", "/tmp/nevax/bin/checkBump.sh");
+package_extract_file("nevax/bin/checkLoki.sh", "/tmp/nevax/bin/checkLoki.sh");
+package_extract_file("nevax/bin/checkJB.sh", "/tmp/nevax/bin/checkJB.sh");
+package_extract_file("nevax/bin/checkKK.sh", "/tmp/nevax/bin/checkKK.sh");
+package_extract_file("nevax/bin/checkLP.sh", "/tmp/nevax/bin/checkLP.sh");
+	set_perm_recursive(0, 0, 0755, 0755, "/tmp");
+set_perm(0, 0, 0755, 0755, "/tmp/nevax/bin/checkBump.sh");
+set_perm(0, 0, 0755, 0755, "/tmp/nevax/bin/checkLoki.sh");
+set_perm(0, 0, 0755, 0755, "/tmp/nevax/bin/checkJB.sh");
+set_perm(0, 0, 0755, 0755, "/tmp/nevax/bin/checkKK.sh");
+set_perm(0, 0, 0755, 0755, "/tmp/nevax/bin/checkLP.sh");
+
+if
+	(file_getprop("/tmp/aroma/bootloader.prop", "selected.1")=="1")
+then
 	ui_print("Flash JB Bootloader..");
 	ui_print("   Patch Bootloader");
 	package_extract_file("nevax/JB/aboot.bin", "/dev/block/platform/msm_sdcc.1/by-name/aboot");
@@ -12,7 +32,7 @@ ui_print(" ");
 	ui_print("   Patch Download Mode");
 	package_extract_file("nevax/JB/laf.bin", "/dev/block/platform/msm_sdcc.1/by-name/laf");
 	set_progress(0.30);
-	ui_print("   Patch Bootstacks");
+	ui_print("   Patch Bootstack");
 	package_extract_file("nevax/JB/persist.bin", "/dev/block/platform/msm_sdcc.1/by-name/persist");
 	set_progress(0.37);
 	package_extract_file("nevax/JB/rpm.bin", "/dev/block/platform/msm_sdcc.1/by-name/rpm");
@@ -23,6 +43,9 @@ ui_print(" ");
 	set_progress(0.65);
 	package_extract_file("nevax/JB/dbi.bin", "/dev/block/platform/msm_sdcc.1/by-name/dbi");
 	set_progress(0.70);
+	ui_print("Checking SHA1sum...")
+  run_program("/tmp/nevax/bin/checkJB.sh");
+	sleep2;
 endif;
 
 if
@@ -46,6 +69,9 @@ then
 	set_progress(0.65);
 	package_extract_file("nevax/KK/dbi.bin", "/dev/block/platform/msm_sdcc.1/by-name/dbi");
 	set_progress(0.70);
+		ui_print("Checking SHA1sum...")
+		run_program("/tmp/nevax/bin/checkKK.sh", "");
+		sleep2;
 endif;
 
 if
@@ -69,6 +95,9 @@ then
 	set_progress(0.65);
 	package_extract_file("nevax/LP/dbi.bin", "/dev/block/platform/msm_sdcc.1/by-name/dbi");
 	set_progress(0.70);
+	ui_print("Checking SHA1sum...")
+	run_program("/tmp/nevax/bin/checkLP.sh", "");
+	sleep2;
 endif;
 
 if
@@ -92,6 +121,9 @@ then
 	set_progress(0.65);
 	package_extract_file("nevax/LP/dbi.bin", "/dev/block/platform/msm_sdcc.1/by-name/dbi");
 	set_progress(0.70);
+	ui_print("Checking SHA1sum...")
+	run_program("/tmp/nevax/bin/checkLoki.sh", "");
+	sleep2;
 endif;
 
 if
@@ -115,6 +147,9 @@ then
 	set_progress(0.65);
 	package_extract_file("nevax/LP/dbi.bin", "/dev/block/platform/msm_sdcc.1/by-name/dbi");
 	set_progress(0.70);
+	ui_print("Checking SHA1sum...")
+	run_program("/tmp/nevax/bin/checkBump.sh", "");
+	sleep2;
 endif;
 
 if
@@ -125,12 +160,12 @@ then
 	package_extract_dir("nevax/TWRP/tmp", "/tmp");
 	set_progress(0.80);
 	package_extract_file("nevax/TWRP/recovery.img", "/tmp/panelfix/recovery.img");
-	set_perm(0, 0, 0755, "/tmp/panelfix.sh");
+	set_perm(0, 0, 0755, "/tmp/panelfix.sh", "");
 	set_perm_recursive(0, 0, 0755, 0755, "/tmp/panelfix");
 	set_progress(0.85);
-	assert(run_program("/tmp/panelfix.sh") == 0);
+	assert(run_program("/tmp/panelfix.sh", "") == 0);
 	set_progress(0.97);
-	delete("/tmp/panelfix.sh");
+	delete("/tmp/panelfix.sh", "");
 endif;
 
 

@@ -1,0 +1,23 @@
+AROMA INSTALLER version 3.00
+  (c) 2013-2015 by amarullz.com
+
+ROM Name    : Bootloader Changer
+ROM Version : 2.2
+ROM Author  : Nevax - xda@NevaX1
+Device      : D802
+Start at    : Sat Aug 15 02:23:44 2015
+
+
+    line 47 col 14: syntax error, unexpected STRING
+    line 73 col 14: syntax error, unexpected STRING
+    line 99 col 13: syntax error, unexpected STRING
+    line 125 col 13: syntax error, unexpected STRING
+    line 151 col 13: syntax error, unexpected STRING
+    5 parse errors
+
+
+Installer Error (Status 6)
+
+
+End at : Sat Aug 15 02:23:44 2015
+

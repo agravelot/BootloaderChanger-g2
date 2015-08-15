@@ -5,14 +5,21 @@ loadlang("langs/en.lang");
 
 #MOD Info
 ini_set("rom_name", "Bootloader Changer");
-ini_set("rom_version", "2.1.1");
+ini_set("rom_version", "2.2");
 ini_set("rom_author", "Nevax - xda@NevaX1");
-ini_set("rom_device", "D800");
-ini_set("rom_date", "13th August 2015");
+ini_set("rom_device", "D802");
+ini_set("rom_date", "15th August 2015");
 
-#Font
+#ReFont
 fontresload("0", "ttf/Roboto-Regular.ttf", "13");
 fontresload("1", "ttf/Roboto-Regular.ttf", "18");
+
+
+writetmpfile(
+  "variant.prop",
+  "variant=d802\n"
+);
+
 
 
 #UI
@@ -45,11 +52,11 @@ selectbox(
     "<~language.english>", "<~language.english.info>", 1,
     "<~language.portuguese>", "<~language.portuguese.info> xda@Rayaxe", 0,
 	  "<~language.czech>", "<~language.czech.info> xda@k0s&n", 0,
-	  "<~language.es>", "<~language.es.info> xda@shakeb4use", 0,
-	  "<~language.russian>", "<~language.russian.info> xda@LidaFlorida - HAZE666", 0,
-	  "<~language.italian>", "<~language.italian.info> xda@kRel", 0,
+  	"<~language.es>", "<~language.es.info> xda@shakeb4use", 0,
+  	"<~language.russian>", "<~language.russian.info> xda@LidaFlorida - HAZE666", 0,
+  	"<~language.italian>", "<~language.italian.info> xda@kRel", 0,
   	"<~language.serbia>", "<~language.serbia.info> xda@Brontok xda@Gradjevinac", 0,
-  	"<~language.croatia>", "<~language.croatia.info> xda@The Marionette", 0
+	  "<~language.croatia>", "<~language.croatia.info> xda@The Marionette", 0
     );
 
 # SET LANGUAGE
@@ -207,8 +214,7 @@ selectbox(
 
 #Recovery
 checkbox(
-
-    "<~rcv.tittle>",
+  "<~rcv.tittle>",
 	"<~rcv.tittle2>",
 	"update",
 	"rcvr.prop",
@@ -236,6 +242,10 @@ install(
 	"<~install.finish>"
 );
 
+alert(
+ "MD5 checksums verification",
+ read("/tmp/nevax/bin/check.txt")
+);
 
 #PostInstall
 ini_set("text_next", "Finish");
