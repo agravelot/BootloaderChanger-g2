@@ -51,7 +51,7 @@ selectbox(
     "<~language.french>", "<~language.french.info>", 0,
     "<~language.english>", "<~language.english.info>", 1,
     "<~language.portuguese>", "<~language.portuguese.info> xda@Rayaxe", 0,
-	  "<~language.czech>", "<~language.czech.info> xda@k0s&n", 0,
+	"<~language.czech>", "<~language.czech.info> xda@k0s&n", 0,
   	"<~language.es>", "<~language.es.info> xda@shakeb4use", 0,
   	"<~language.russian>", "<~language.russian.info> xda@LidaFlorida - HAZE666", 0,
   	"<~language.italian>", "<~language.italian.info> xda@kRel", 0,
