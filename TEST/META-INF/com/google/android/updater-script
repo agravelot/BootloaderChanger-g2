@@ -5,11 +5,6 @@ ui_print("@              www.youtube.com/nevaxtuto ");
 ui_print("@              www.twitter.com/Nevax07 ");
 ui_print(" ");
 
-
-
-if
-	(file_getprop("/tmp/aroma/bootloader.prop", "selected.1")=="1")
-then
 	ui_print("Flash JB Bootloader..");
 	ui_print("   Patch Bootloader");
 	package_extract_file("nevax/JB/aboot.bin", "/dev/block/platform/msm_sdcc.1/by-name/aboot");
@@ -17,7 +12,7 @@ then
 	ui_print("   Patch Download Mode");
 	package_extract_file("nevax/JB/laf.bin", "/dev/block/platform/msm_sdcc.1/by-name/laf");
 	set_progress(0.30);
-	ui_print("   Patch Bootstack");
+	ui_print("   Patch Bootstacks");
 	package_extract_file("nevax/JB/persist.bin", "/dev/block/platform/msm_sdcc.1/by-name/persist");
 	set_progress(0.37);
 	package_extract_file("nevax/JB/rpm.bin", "/dev/block/platform/msm_sdcc.1/by-name/rpm");
@@ -28,12 +23,6 @@ then
 	set_progress(0.65);
 	package_extract_file("nevax/JB/dbi.bin", "/dev/block/platform/msm_sdcc.1/by-name/dbi");
 	set_progress(0.70);
-	if
-		(file_getprop("/tmp/aroma/bootloader.prop", "selected.2")=="1")
-	then
-		ui_print("Installing JB Modem...");
-		package_extract_file("nevax/JB/modem.bin", "/dev/block/platform/msm_sdcc.1/by-name/modem");
-	endif;
 endif;
 
 if
@@ -143,8 +132,6 @@ then
 	set_progress(0.97);
 	delete("/tmp/panelfix.sh");
 endif;
-
-
 
 
 set_progress(1.0);
