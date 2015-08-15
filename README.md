@@ -6,7 +6,7 @@ XDA Forum : http://forum.xda-developers.com/lg-g2/general/d802-bootloader-change
 
 Download (MEGA) : https://goo.gl/tgJ5eD
 
-#How translate
+#How to translate
 It's pretty easily, you need to create a new file with first letters with the extension (ex: French > fr.lang).
 All languages files are available here : https://github.com/Nevax07/BootloaderChanger-g2/tree/master/BootloaderChanger-d802-nevax-/META-INF/com/google/android/aroma/langs
 
