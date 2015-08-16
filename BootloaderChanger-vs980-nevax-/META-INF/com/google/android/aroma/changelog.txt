@@ -1,3 +1,11 @@
+2.1.2
+-Support Turkish language xda@iko11
+-Update Italian language github@Stratoblu xda@kRel
+-Update AROMA Update 3.0 amarullz for all variants (my bad)
+-Add MD5 of all bin /nevax/MD5 (for future update).
+-Add tz.bin D805 KK
+-all img > bin d803/5/6
+
 2.1.1
 -Update AROMA Update 3.0 amarullz
 	FLAMBOYAN MELATI- 3.00b1
