@@ -2,9 +2,9 @@
 #	Bootloader Changer language file
 #
 #	English by: Nevax
-#   
-#     
-#  
+#
+#
+#
 
 text_ok=OK
 text_next=Next
@@ -17,7 +17,7 @@ text_quit=Quit Installation
 text_quit_msg=Are you sure to quit the installer?
 
 welcome.title=Welcome
-welcome.text1=You are about to use 
+welcome.text1=You are about to use
 welcome.version=VERSION
 welcome.codename=CODENAME
 welcome.updated=UPDATED
@@ -79,7 +79,7 @@ sys.info.storage=Storage Size
 sys.info.storage.free=Free
 
 bl.tittle=Bootloader Variant
-bl.title2=Please select your bootloader's variant.
+bl.title2=Please select the bootloader you want to install.
 
 rcv.tittle=Install TWRP 2.8.7.1 recovery Bumped!
 rcv.tittle2=Recovery by blastagator
@@ -99,5 +99,5 @@ installing.title=Installing...
 finish.title=Congratulations!
 finish.msg=Bootloader Changer has been installed to your phone successfully.
 finish.msg2=Don't forget to reboot your recovery if want flash a new rom!
-finish.status=Installation result: 
+finish.status=Installation result:
 finish.reboot=Reboot your device now.
