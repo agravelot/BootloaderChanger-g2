@@ -1,3 +1,6 @@
+# Bootloader Changer aroma-config script
+# (c)Nevax
+#
 #Font&Language
 fontresload("0", "ttf/Roboto-Regular.ttf", "13");
 fontresload("1", "ttf/Roboto-Regular.ttf", "18");
@@ -5,10 +8,10 @@ loadlang("langs/en.lang");
 
 #MOD Info
 ini_set("rom_name", "Bootloader Changer");
-ini_set("rom_version", "2.1.2");
+ini_set("rom_version", "2.2");
 ini_set("rom_author", "Nevax - xda@NevaX1");
 ini_set("rom_device", "ls980");
-ini_set("rom_date", "15th August 2015");
+ini_set("rom_date", "23th August 2015");
 
 #Font
 fontresload("0", "ttf/Roboto-Regular.ttf", "13");
@@ -210,8 +213,12 @@ selectbox(
 		"Lollipop Loki", "Lollipop bootloader Lokified", 0,
 		"Lollipop Bump", "Lollipop bootloader Bumped", 0,
     "Check Assert", "", 2,
-    		"Yes", " ", 1,
-        "No", " ", 0
+    		"Yes (Recommended)", " ", 1,
+        "No", " ", 0,
+    "Reboot ?", "", 2,
+        "Recovery", "Reboot to recovery ", 1,
+        "System", "Reboot to Android ", 0,
+        "Nop", ":(", 0
 );
 
 #Recovery
