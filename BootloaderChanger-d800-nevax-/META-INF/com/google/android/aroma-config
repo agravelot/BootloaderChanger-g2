@@ -248,7 +248,7 @@ ini_set("text_next", "<~text_next>");
 install(
 	"<~install>",
 	"<b>" + ini_get("rom_name") + "</b> is being installed.\n\n" +
-	"@install",
+	"@update",
 	"<~install.finish>"
 );
 
