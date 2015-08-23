@@ -3,7 +3,7 @@
 - Add assert check support
 - Add reboot option "Recovery, system or Nop :("
 - New boot splash
-- Fix freeze when flashing TWRP, wrong EOL panelfix.sh - Thx github@interfect 
+- Fix freeze when flashing TWRP, wrong EOL panelfix.sh - Thx github@interfect
 - Update english language github@Stratoblu
 - New bootloader available for D805/6
 	Lollipop Original
@@ -11,6 +11,7 @@
 	Lollipop Lokified
 - Add Lollipop persist.bin for F320K/L/S
 - Remove misc.bin for d800 "never used but i don't why it is here"
+- New guide
 2.1.2
 -Support Turkish language xda@iko11
 -Update Italian language github@Stratoblu xda@kRel
