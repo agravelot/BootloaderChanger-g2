@@ -1,11 +1,19 @@
 ui_print(" ");
+ui_print("------------------------------------------------- ");
 ui_print("@                   Bootloader Changer");
 ui_print("@              www.facebook.com/nevaxtuto ");
 ui_print("@              www.youtube.com/nevaxtuto ");
 ui_print("@              www.twitter.com/Nevax07 ");
+ui_print("------------------------------------------------- ");
+ui_print(" ");
 ui_print(" ");
 
-
+if
+	(file_getprop("/tmp/aroma/bootloader.prop", "selected.2")=="1")
+then
+	assert(getprop("ro.product.device") == "d800" || getprop("ro.build.product") == "d800" || getprop("ro.product.device") == "g2" || getprop("ro.build.product") == "g2" || getprop("ro.product.device") == "galbi" || getprop("ro.build.product") == "galbi"  || abort("This package is for device: d800,g2,galbi; this device is " + getprop("ro.product.device") + "."););
+	ui_print("Assert D800 : OK ");
+endif;
 
 if
 	(file_getprop("/tmp/aroma/bootloader.prop", "selected.1")=="1")
@@ -28,12 +36,6 @@ then
 	set_progress(0.65);
 	package_extract_file("nevax/JB/dbi.bin", "/dev/block/platform/msm_sdcc.1/by-name/dbi");
 	set_progress(0.70);
-	if
-		(file_getprop("/tmp/aroma/bootloader.prop", "selected.2")=="1")
-	then
-		ui_print("Installing JB Modem...");
-		package_extract_file("nevax/JB/modem.bin", "/dev/block/platform/msm_sdcc.1/by-name/modem");
-	endif;
 endif;
 
 if

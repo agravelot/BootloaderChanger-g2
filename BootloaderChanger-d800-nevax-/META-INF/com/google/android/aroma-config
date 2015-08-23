@@ -208,7 +208,10 @@ selectbox(
 		"KitKat", "KitKat Bootloader", 0,
 		"Lollipop Original", "Original Lollipop bootloader", 0,
 		"Lollipop Loki", "Lollipop bootloader Lokified", 0,
-		"Lollipop Bump", "Lollipop bootloader Bumped", 0
+		"Lollipop Bump", "Lollipop bootloader Bumped", 0,
+    "Check Assert", "", 2,
+    		"Yes", " ", 1,
+        "No", " ", 0
 );
 
 #Recovery

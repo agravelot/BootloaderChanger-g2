@@ -7,7 +7,7 @@ loadlang("langs/en.lang");
 ini_set("rom_name", "Bootloader Changer");
 ini_set("rom_version", "2.1.2");
 ini_set("rom_author", "Nevax - xda@NevaX1");
-ini_set("rom_device", "VS980");
+ini_set("rom_device", "D800");
 ini_set("rom_date", "15th August 2015");
 
 #Font
@@ -44,12 +44,14 @@ selectbox(
     "<~language.french>", "<~language.french.info>", 0,
     "<~language.english>", "<~language.english.info>", 1,
     "<~language.portuguese>", "<~language.portuguese.info> xda@Rayaxe", 0,
-	"<~language.czech>", "<~language.czech.info> xda@k0s&n", 0,
-	"<~language.es>", "<~language.es.info> xda@shakeb4use", 0,
-	"<~language.russian>", "<~language.russian.info> xda@LidaFlorida - HAZE666", 0,
-	"<~language.italian>", "<~language.italian.info> xda@kRel", 0,
-	"<~language.serbia>", "<~language.serbia.info> xda@Brontok xda@Gradjevinac", 0,
-	"<~language.croatia>", "<~language.croatia.info> xda@The Marionette", 0
+	  "<~language.czech>", "<~language.czech.info> xda@k0s&n", 0,
+  	"<~language.es>", "<~language.es.info> xda@shakeb4use", 0,
+  	"<~language.russian>", "<~language.russian.info> xda@LidaFlorida - HAZE666", 0,
+  	"<~language.italian>", "<~language.italian.info> xda@kRel", 0,
+  	"<~language.serbia>", "<~language.serbia.info> xda@Brontok xda@Gradjevinac", 0,
+	  "<~language.croatia>", "<~language.croatia.info> xda@The Marionette", 0,
+	  "<~language.turkish>", "<~language.turkish.info> xda@iko11 ", 0
+
     );
 
 # SET LANGUAGE
@@ -87,6 +89,10 @@ endif;
 
 if prop("language.prop","selected.0")=="9" then
   loadlang("langs/cr.lang");
+endif;
+
+if prop("language.prop","selected.0")=="10" then
+  loadlang("langs/tr.lang");
 endif;
 
 
@@ -202,7 +208,10 @@ selectbox(
 		"KitKat", "KitKat Bootloader", 0,
 		"Lollipop Original", "Original Lollipop bootloader", 0,
 		"Lollipop Loki", "Lollipop bootloader Lokified", 0,
-		"Lollipop Bump", "Lollipop bootloader Bumped", 0
+		"Lollipop Bump", "Lollipop bootloader Bumped", 0,
+    "Check Assert", "", 2,
+    		"Yes", " ", 1,
+        "No", " ", 0
 );
 
 #Recovery
