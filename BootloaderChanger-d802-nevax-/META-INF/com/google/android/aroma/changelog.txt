@@ -12,6 +12,7 @@
 - Add Lollipop persist.bin for F320K/L/S
 - Remove misc.bin for d800 "never used but i don't why it is here"
 - New guide
+
 2.1.2
 -Support Turkish language xda@iko11
 -Update Italian language github@Stratoblu xda@kRel
