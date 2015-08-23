@@ -17,6 +17,8 @@ then
 	assert(getprop("ro.product.device") == "vs980" || getprop("ro.build.product") == "vs980" || getprop("ro.product.device") == "g2" || getprop("ro.build.product") == "g2" || getprop("ro.product.device") == "galbi" || getprop("ro.build.product") == "galbi"  || abort("This package is for device: vs980,g2,galbi; this device is " + getprop("ro.product.device") + "."););
 	ui_print("Assert vs980 : OK ");
 endif;
+ui_print(" ");
+ui_print(" ");
 
 if
 	(file_getprop("/tmp/aroma/bootloader.prop", "selected.1")=="1")
