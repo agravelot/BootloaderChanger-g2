@@ -1,18 +1,18 @@
 ui_print(" ");
-ui_print("------------------------------------------------- ");
+ui_print("----------------------------------------------------------- ");
 ui_print("@                   Bootloader Changer");
 ui_print("@              www.facebook.com/nevaxtuto ");
 ui_print("@              www.youtube.com/nevaxtuto ");
 ui_print("@              www.twitter.com/Nevax07 ");
-ui_print("------------------------------------------------- ");
+ui_print("----------------------------------------------------------- ");
 ui_print(" ");
 ui_print(" ");
 
 if
 	(file_getprop("/tmp/aroma/bootloader.prop", "selected.2")=="1")
 then
-	assert(getprop("ro.product.device") == "d800" || getprop("ro.build.product") == "d800" || getprop("ro.product.device") == "g2" || getprop("ro.build.product") == "g2" || getprop("ro.product.device") == "galbi" || getprop("ro.build.product") == "galbi"  || abort("This package is for device: d800,g2,galbi; this device is " + getprop("ro.product.device") + "."););
-	ui_print("Assert D800 : OK ");
+	assert(getprop("ro.product.device") == "d803" || getprop("ro.build.product") == "d803" || getprop("ro.product.device") == "g2" || getprop("ro.build.product") == "g2" || getprop("ro.product.device") == "galbi" || getprop("ro.build.product") == "galbi"  || abort("This package is for device: d803,g2,galbi; this device is " + getprop("ro.product.device") + "."););
+	ui_print("Assert d803 : OK ");
 endif;
 
 if

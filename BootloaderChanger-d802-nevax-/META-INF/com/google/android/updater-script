@@ -1,10 +1,10 @@
 ui_print(" ");
-ui_print("------------------------------------------------- ");
+ui_print("----------------------------------------------------------- ");
 ui_print("@                   Bootloader Changer");
 ui_print("@              www.facebook.com/nevaxtuto ");
 ui_print("@              www.youtube.com/nevaxtuto ");
 ui_print("@              www.twitter.com/Nevax07 ");
-ui_print("------------------------------------------------- ");
+ui_print("----------------------------------------------------------- ");
 ui_print(" ");
 ui_print(" ");
 

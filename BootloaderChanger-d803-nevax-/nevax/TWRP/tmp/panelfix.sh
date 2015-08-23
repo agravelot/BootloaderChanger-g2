@@ -6,7 +6,7 @@
 
 # 4.4 Kernel - Panel Detection - dr87 (Recovery Version)
 #
-# Detect panel and swap as necessary 
+# Detect panel and swap as necessary
 # lcd_maker_id is determined by get_panel_maker_id on the hardware and is always accurate
 # This searches directly in the recovery.img and has no other requirements
 # Do not shorten the search or you may change the actual kernel source

@@ -7,7 +7,7 @@ loadlang("langs/en.lang");
 ini_set("rom_name", "Bootloader Changer");
 ini_set("rom_version", "2.1.2");
 ini_set("rom_author", "Nevax - xda@NevaX1");
-ini_set("rom_device", "D800");
+ini_set("rom_device", "d803");
 ini_set("rom_date", "15th August 2015");
 
 #Font
