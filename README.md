@@ -4,7 +4,7 @@ Heelo world :)
 
 XDA Forum : http://forum.xda-developers.com/lg-g2/general/d802-bootloader-changer-1-1-jb-kk-lp-t3104380
 
-Download (MEGA) : https://goo.gl/tgJ5eD
+Download (Google Driver) : https://goo.gl/hl4r8r
 
 #How to translate
 It's pretty easily, you need to create a new file with first letters with the extension (ex: French > fr.lang).
