@@ -8,10 +8,10 @@ loadlang("langs/en.lang");
 
 #MOD Info
 ini_set("rom_name", "Bootloader Changer");
-ini_set("rom_version", "2.2");
+ini_set("rom_version", "2.3");
 ini_set("rom_author", "Nevax - xda@NevaX1");
 ini_set("rom_device", "ls980");
-ini_set("rom_date", "23th August 2015");
+ini_set("rom_date", "24th September 2015");
 
 #Font
 fontresload("0", "ttf/Roboto-Regular.ttf", "13");
@@ -209,12 +209,12 @@ selectbox(
 	"Bootloader", "", 2,
 		"JellyBean", "Jellybean Bootloader", 0,
 		"KitKat", "KitKat Bootloader", 0,
-		"Lollipop Original", "Original Lollipop bootloader", 0,
+		"Lollipop Original (Not recommended)", "Original Lollipop bootloader", 0,
 		"Lollipop Loki", "Lollipop bootloader Lokified", 0,
 		"Lollipop Bump", "Lollipop bootloader Bumped", 0,
     "Check Assert", "", 2,
-    		"Yes (Recommended)", " ", 1,
-        "No", "Check variant in build.prop ", 0,
+    		"Yes (Recommended)", "Check variant in build.prop", 1,
+        "No", "Do not check variant in build.prop ", 0,
     "Reboot ?", "", 2,
         "Recovery", "Reboot to recovery ", 1,
         "System", "Reboot to Android ", 0,
@@ -238,7 +238,9 @@ viewbox(
 	"<~pre.install.title>",
 	"<~pre.install>\n\n" +
 	"<~pre.install2>\n\n" +
-	"<~pre.install3>",
+	"<~pre.install3>\n\n\n\n" +
+  "<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>\n"+
+  "<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>\n",
 	"@install"
 );
 
