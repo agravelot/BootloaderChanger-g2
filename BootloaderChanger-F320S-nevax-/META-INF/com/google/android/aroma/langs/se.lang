@@ -2,9 +2,9 @@
 #	Bootloader Changer language file
 #
 #	Srpski/Hrvatski/Bosanski by: Brontok
-# 
-# 
-# 
+#
+#
+#
 
 text_ok=OK
 text_next=Naprijed
@@ -30,7 +30,7 @@ language.text=Odaberite instalacioni jezik
 language.english=English
 language.english.info=Using English
 language.french=France
-language.french.info=Utiliser le Français
+language.french.info=Utiliser le Franï¿½ais
 welcome.microblog=Youtube
 rom.data=31 June 2015
 text_finish=Kraj
@@ -72,6 +72,8 @@ pre.install.title=Spremno za instalaciju
 pre.install=Instalacija moze poceti
 pre.install2=Kliknite <b>Pocni instalaciju</b> kako bi otpoceli instalaciju.
 pre.install3=Ukoliko zelite pregled dosadasnjih akcija, ili zelite da nesto dodate kliknite <b>Nazad</b>
+warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>\n
+warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>\n
 
 install=Instalacija
 install.now=Instalacija je u toku
@@ -80,6 +82,6 @@ install.finish.title=Instalacija je zavrsena.
 installing.title=Instalacija...
 finish.title=Cestitamo!
 finish.msg=Bootloader je uspjesno instaliran na Vasem uredjaju.
-finish.msg2=Ne zaboravite da restartujete recovery ukoliko zelite da instalirate/flešujete novi ROM!
-finish.status=Razultat instalacije: 
+finish.msg2=Ne zaboravite da restartujete recovery ukoliko zelite da instalirate/fleï¿½ujete novi ROM!
+finish.status=Razultat instalacije:
 finish.reboot=Restartujte Vas uredjaj.

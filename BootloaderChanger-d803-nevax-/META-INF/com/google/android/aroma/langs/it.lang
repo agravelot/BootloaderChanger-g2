@@ -2,9 +2,9 @@
 #	Bootloader Changer language file
 #
 #	Italian by: kRel
-# 
-# 
-# 
+#
+#
+#
 
 text_ok=OK
 text_next=Avanti
@@ -17,7 +17,7 @@ text_quit=Terminare l'installazione
 text_quit_msg=Sei sicuro di abbandonare l'installazione?
 
 welcome.title=Benvenuto
-welcome.text1=Stai per usare 
+welcome.text1=Stai per usare
 welcome.version=VERSIONE
 welcome.codename=NOME IN CODICE
 welcome.updated=AGGIORNAMENTO
@@ -43,7 +43,7 @@ by=da
 main.tittle=Per favore seleziona menù in basso per avviare l'installazione
 main.install=Installazione
 main.install.info=Continua l'installazione della mod
-main.sys=Informazioni sul sistema 
+main.sys=Informazioni sul sistema
 main.sys.info=Mostra informazioni sul dispositivo
 main.changelog.info=Bootloader Changer Registro delle modifiche
 main.exit=Uscita
@@ -75,10 +75,12 @@ pre.install.title=Pronto all'installazione
 pre.install=La procedura guidata è pronta ad avviare l'installazione
 pre.install2=Premi <b>Installa ora</b> per avviare l'installazione
 pre.install3=Se vuoi rivedere o cambiare qualcosa nelle impostazioni di installazione, premi <b>Indietro</b>.
+warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>\n
+warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>\n
 
 install=Installazione
 install.now=Installa ora
-install.finish=La procedura guidata ha installato Bootloader Changer nel tuo dispositivo con successo. 
+install.finish=La procedura guidata ha installato Bootloader Changer nel tuo dispositivo con successo.
 
 Premi AVANTI per continuare
 install.finish.title=L'installazione è stata completata.
@@ -86,5 +88,5 @@ installing.title=Installazione...
 finish.title=Congratulazioni!
 finish.msg=Bootloader Changer è stato installato nel tuo dispositivo con successo.
 finish.msg2=Non dimenticare di riavviare la recovery se vuoi flashare una nuova ROM!
-finish.status=Risultato dell'installazione: 
+finish.status=Risultato dell'installazione:
 finish.reboot=Riavvia il tuo dispositivo ora.

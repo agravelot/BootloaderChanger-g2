@@ -1,3 +1,7 @@
+2.3
+- Add waring for flashing original LP Bootloader xda@dorimanx
+- Update Binaries for some variants (In progress) with more clarity
+
 2.2
 - Retrun to 2.70 AROMA (More stable)
 - Add assert check support

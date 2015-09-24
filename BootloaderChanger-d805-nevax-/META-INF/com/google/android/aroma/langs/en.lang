@@ -90,6 +90,8 @@ pre.install.title=Ready to Install
 pre.install=The wizard is ready to begin the installation.
 pre.install2=Press <b>Install Now</b> to begin the installation.
 pre.install3=If you want to review or change any of your installation settings, press <b>Back</b>.
+warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>\n
+warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>\n
 
 install=Installing
 install.now=Install Now

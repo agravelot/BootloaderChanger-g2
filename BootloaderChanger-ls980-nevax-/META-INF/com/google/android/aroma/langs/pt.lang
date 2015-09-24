@@ -2,9 +2,9 @@
 # Bootloader Changer language file
 #
 # Portuguese by: Rayaxe
-# 
+#
 # Some things like "welcome.version" and so I didn't translate because we portuguese don't translate development terms to our language. I will put in the end the translation for those words if you want to use it but I don't recoment it
-# 
+#
 
 text_ok=Ok
 text_next=Próximo
@@ -75,6 +75,8 @@ pre.install.title=Pronto para instalar
 pre.install=O programa está pronto para começar a instalação.
 pre.install2=Pressione <b>Instalar agora</b> para dar inicio à instalação.
 pre.install3=Se quiser rever ou alterar alguma configuração de instalação, pressione <b>Anterior</b>.
+warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>\n
+warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>\n
 
 install=A instalar
 install.now=Instalar agora

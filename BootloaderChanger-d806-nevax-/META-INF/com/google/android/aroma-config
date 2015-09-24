@@ -239,8 +239,8 @@ viewbox(
 	"<~pre.install>\n\n" +
 	"<~pre.install2>\n\n" +
 	"<~pre.install3>\n\n\n\n" +
-  "<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>\n"+
-  "<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>\n",
+  "<~warning1>"+
+  "<~warning2>",
 	"@install"
 );
 

@@ -2,9 +2,9 @@
 #	Bootloader Changer language file
 #
 #	Russian by: HAZE666
-#   
-#     
-#  
+#
+#
+#
 
 text_ok=Ок
 text_next=Далее
@@ -72,9 +72,11 @@ rcv1=Установить рекавери TWRP 2.8.7.1
 rcv2=Важно иметь свежую версию рекавери
 
 pre.install.title=Всё готово к установке
-pre.install=Всё готово к установке. 
+pre.install=Всё готово к установке.
 pre.install2=Нажмите <b>Install Now</b> для начала установки.
 pre.install3=Если вы хотите изменить параметры установки, нажмите <b>Back</b>.
+warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>\n
+warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>\n
 
 install=Установка
 install.now=Установить
@@ -84,5 +86,5 @@ installing.title=Установка...
 finish.title=Поздравляем!
 finish.msg=Bootloader Changer успешно установлен на ваш телефон.
 finish.msg2=Не забудьте перезагрузить рекавери, если Вы хотите установить новую прошивку!
-finish.status=Результат: 
+finish.status=Результат:
 finish.reboot=Перезагрузить девайс.

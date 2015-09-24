@@ -2,9 +2,9 @@
 #	Bootloader Changer language file
 #
 #	Czech by : k0s&n
-# 
-# 
-# 
+#
+#
+#
 
 text_ok=OK
 text_next=Další
@@ -17,7 +17,7 @@ text_quit=Opustit instalaci
 text_quit_msg=Opravdu chcete zrušit instalaci?
 
 welcome.title=Vítejte
-welcome.text1=You are about to use 
+welcome.text1=You are about to use
 welcome.version=VERZE
 welcome.codename=CODENAME
 welcome.updated=UPDATOVÁNO
@@ -75,6 +75,8 @@ pre.install.title=Připraven instalovat
 pre.install=Můžeme začít,
 pre.install2=Stiskni <b>Instalovat</b> pro spuštění instalace.
 pre.install3=Pokud chcete změnit nastavení stiskněte <b>Zpět</b>.
+warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>\n
+warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>\n
 
 install=Instaluji
 install.now=Instalovat
@@ -84,5 +86,5 @@ installing.title=Instaluji...
 finish.title=Gratuluji!
 finish.msg=Bootloader changer se nainstaloval úspěšně.
 finish.msg2=Nezapomeňte se vrátit při rebootu do recovery, pokud chcete instalovat novou ROM.
-finish.status=Výsledky instalace: 
+finish.status=Výsledky instalace:
 finish.reboot=Restartujte své zařízení.

@@ -1,10 +1,10 @@
 #########################################################
 #	Bootloader Changer language file
 #
-#	Türkçe Çeviri: iko11@xda jinjin@DH   <- Change here with your nickname 
-#   
-#     
-#  
+#	Türkçe Çeviri: iko11@xda jinjin@DH   <- Change here with your nickname
+#
+#
+#
 
 text_ok=TAMAM
 text_next=İleri
@@ -77,6 +77,8 @@ pre.install.title=Yüklemeye Hazırsınız
 pre.install=Yükleme Sihirbazı İşleminizi Gerçekleştirmek için Hazır.
 pre.install2=İşleme Başlamak için <b>Şimdi Yükle</b> Tuşuna Dokunun.
 pre.install3=Seçimlerini Gözden Geçirmek veya Değiştirmek için <b>Geri</b> Tuşuna Dokunun.
+warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>\n
+warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>\n
 
 install=Yükleniyor
 install.now=Şimdi Yükle
@@ -86,5 +88,5 @@ installing.title=Yükleniyor...
 finish.title=Tebrikler!
 finish.msg=Bootlaoder Değiştirici Cihazınıza Başarıyla Yüklendi.
 finish.msg2=Yeni Bir ROM Yükleme İstiyorsanız Cihazınızı Recovery Moduna Yeniden Başlatmayı Unutmayın!
-finish.status=Yükleme Sonucu: 
+finish.status=Yükleme Sonucu:
 finish.reboot=Cihazı Yeniden Başlat.
