@@ -26,4 +26,6 @@ F320S     |         11G	      |         21U        |        30E 	   		 |
 LS980     |         	   	    |                    |          	 	   		 |
 VS980     |        	   	      |                    |          		   		 |
 
-* Not in github, please wait
+(*) Not in github, please wait
+
+Yes i made this mode on Windows, no joke.
