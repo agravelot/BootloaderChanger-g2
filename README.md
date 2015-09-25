@@ -28,4 +28,3 @@ VS980     |        	   	      |                    |          		   		 |
 
 (*) Not in github, please wait
 
-Yes i made this mode on Windows, no joke.
