@@ -75,8 +75,8 @@ pre.install.title=Всё готово к установке
 pre.install=Всё готово к установке.
 pre.install2=Нажмите <b>Install Now</b> для начала установки.
 pre.install3=Если вы хотите изменить параметры установки, нажмите <b>Back</b>.
-warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>\n
-warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>\n
+warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>
+warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>
 
 install=Установка
 install.now=Установить

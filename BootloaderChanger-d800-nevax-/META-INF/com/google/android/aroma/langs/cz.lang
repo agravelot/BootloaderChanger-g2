@@ -75,8 +75,8 @@ pre.install.title=Připraven instalovat
 pre.install=Můžeme začít,
 pre.install2=Stiskni <b>Instalovat</b> pro spuštění instalace.
 pre.install3=Pokud chcete změnit nastavení stiskněte <b>Zpět</b>.
-warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>\n
-warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>\n
+warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>
+warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>
 
 install=Instaluji
 install.now=Instalovat

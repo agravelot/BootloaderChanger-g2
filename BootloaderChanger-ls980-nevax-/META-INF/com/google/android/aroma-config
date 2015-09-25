@@ -239,7 +239,7 @@ viewbox(
 	"<~pre.install>\n\n" +
 	"<~pre.install2>\n\n" +
 	"<~pre.install3>\n\n\n\n" +
-  "<~warning1>"+
+  "<~warning1>\n"+
   "<~warning2>",
 	"@install"
 );

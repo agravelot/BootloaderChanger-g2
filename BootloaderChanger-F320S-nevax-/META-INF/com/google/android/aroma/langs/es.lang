@@ -73,8 +73,8 @@ pre.install.title=Preparado para instalar
 pre.install=El asistente está listo para comenzar la instalación
 pre.install2=Pulsa <b>Instalar Ahora</b> para comenzar la instalación.
 pre.install3=Si quieres revisar o cambiar algo de la instalación, pulsa <b>Retroceder</b>.
-warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>\n
-warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>\n
+warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>
+warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>
 
 install=Instalando
 install.now=Instalar Ahora

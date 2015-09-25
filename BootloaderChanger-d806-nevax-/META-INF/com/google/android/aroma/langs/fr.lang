@@ -72,8 +72,8 @@ pre.install.title=Prêt pour installation
 pre.install=L'outil est prêt pour l'installation.
 pre.install2=Appuyer <b>Installer Maintenant</b> pour débuter l'installation.
 pre.install3=Si vous souhaitez vérifier ou modifier vos paramètres d'installation, appuyer sur <b>Retour</b>.
-warning1=<b>Si vous avez un recovery modifé ou un kernel modifié. NE JAMAIS!!! installer le Bootloader Lollipop d'origine!</b>\n
-warning2=<b>Votre G2 sera brick à la seconde même! Alors vous perdrez toutes vos données! Et vous dvrez utiliser le download mode pour retourner en stock, et tout recommencer!</b>\n
+warning1=<b>Si vous avez un recovery modifé ou un kernel modifié. NE JAMAIS!!! installer le Bootloader Lollipop d'origine!</b>
+warning2=<b>Votre G2 sera brick à la seconde même! Alors vous perdrez toutes vos données! Et vous dvrez utiliser le download mode pour retourner en stock, et tout recommencer!</b>
 
 install=Installation
 install.now=Installer Maintenant

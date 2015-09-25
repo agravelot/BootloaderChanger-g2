@@ -72,8 +72,8 @@ pre.install.title=Spremno za instalaciju
 pre.install=Instalacija moze poceti
 pre.install2=Kliknite <b>Pocni instalaciju</b> kako bi otpoceli instalaciju.
 pre.install3=Ukoliko zelite pregled dosadasnjih akcija, ili zelite nesto dodati kliknite <b>Nazad</b>
-warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>\n
-warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>\n
+warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>
+warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>
 
 install=Instalacija
 install.now=Instalacija je u tijeku
