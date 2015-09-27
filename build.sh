@@ -3,10 +3,10 @@
 echo Version :
 read version
 
-GITHUBPATH=/home/nevax/GitHub/BootloaderChanger-g2
-DRIVEDIR=/media/nevax/SSHD/MEGA/Android/MOD/BootloaderChanger-g2
-DRIVEDIR="/home/nevax//Google Drive/Android/MOD/BootloaderChanger-g2"
-TEMP=/media/nevax/SSHD/tmp
+GITHUBPATH="/home/nevax/GitHub/BootloaderChanger-g2"
+MEGADIR="/media/nevax/SSHD/MEGA/Android/MOD/BootloaderChanger-g2"
+DRIVEDIR="/home/nevax/Google Drive/Android/MOD/BootloaderChanger-g2"
+TEMP="/media/nevax/SSHD/tmp"
 
 cp $GITHUBPATH/tools/SignApk/* $TEMP
 
