@@ -1,3 +1,13 @@
+2.3.1
+- Update Lollipop Bootloader for D802/5/6 to 30f
+- Remove MD5 in zip, not used
+- Remake all the tree on github
+- Warning only for original Lollipop Bootloader
+- Fix ico recovery step (aroma)
+- Regroup :
+	> F320L / F320S / F320K > F320x
+	> D802 / D805 / D806 > D802_5_6
+
 2.3
 - Add waring for flashing original LP Bootloader xda@dorimanx
 - Update Binaries for some variants with more clarity, more info on my Github.

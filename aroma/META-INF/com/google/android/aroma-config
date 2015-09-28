@@ -225,7 +225,7 @@ selectbox(
 checkbox(
   "<~rcv.tittle>",
 	"<~rcv.tittle2>",
-	"update",
+	"@update",
 	"rcvr.prop",
   "Recovery", "", 2,
   "<~rcv1>", "<~rcv2>", 1
@@ -238,20 +238,20 @@ if prop("bootloader.prop", "selected.1")=="3" then
      "Warning",
      "\n\n\n\n" +
      "<~warning1>\n" +
-     "<~warning2>",
+     "<~warning2>"
 );
 endif;
 
 
-  ini_set("text_next", "<~install.now>");
-  viewbox(
-  	"<~pre.install.title>",
-  	"<~pre.install>\n\n" +
-  	"<~pre.install2>\n\n" +
-  	"<~pre.install3>\n\n\n\n" +
+ini_set("text_next", "<~install.now>");
+viewbox(
+	"<~pre.install.title>",
+	"<~pre.install>\n\n" +
+	"<~pre.install2>\n\n" +
+	"<~pre.install3>\n\n\n\n",
 	"@install"
-
 );
+
 
 
 #Install
