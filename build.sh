@@ -1,16 +1,17 @@
 #!/bin/bash
 
 clear
-#Set version of BootloaderChanger-g2
-echo Version :
-read version
+#Set VERSION of BootloaderChanger-g2
+echo VERSION :
+read VERSION
 
 clear
 
 echo Choose upload directories :
 echo 1 - MEGA
 echo 2 - Google Drive
-echo 3 - Custom path
+echo 3 - ./output folder
+echo 4 - Custom path
 read CHOOSE
 
 echo -en '\n'
@@ -23,8 +24,12 @@ GITHUBPATH=/home/nevax/GitHub/BootloaderChanger-g2
 #My dir for upload
 MEGADIR=/media/nevax/SSHD/MEGA/Android/MOD/BootloaderChanger-g2
 DRIVEDIR=/home/nevax/Google\ Drive/Android/MOD/BootloaderChanger-g2
+#
+LOCALDIR="$(pwd)"
+#Set output folder, recommanded
+OUTPUT=$LOCALDIR/output
 #Set temp folder
-TEMP=/media/nevax/SSHD/tmp
+TEMP=$LOCALDIR/tmp
 
 if [ "$CHOOSE" = 1 ]
   then
@@ -40,6 +45,12 @@ fi
 
 if [ "$CHOOSE" = 3 ]
   then
+  UPLOAD=$OUTPUT
+  echo Set ./output :
+fi
+
+if [ "$CHOOSE" = 4 ]
+  then
   echo Set you custom path /your/path/output
   read UPLOAD
   echo Set cutstom path :
@@ -47,132 +58,327 @@ fi
 
 echo -en '\n'
 echo $UPLOAD
+echo -en '\n'
+echo -en '\n'
 
-#echo "Appuyer la touche <Entrée> pour continuer..."
-#read touche
-#case $touche in
-#*)	echo "Reprise du script..."
-#	;;
-#esac
+#Clean tmp folder
+rm -R $TEMP/*
 
 
- #Create temp folder
-mkdir $TEMP
-chmod -R 777 $TEMP
-#Copy tools needed for building
-cp $GITHUBPATH/tools/SignApk/* $TEMP
-
-#Set variant
-variant=d800
-
-cd "$GITHUBPATH/BootloaderChanger-$variant-nevax-/"
+#Set VARIANT
+VARIANT=d800
+#Make directories for VARIANT in tmp
+mkdir $TEMP/$VARIANT
+#Copy META-INF folder to tmp/$varaint
+cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
+#Copy binaries to TEMP folder
+cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+#
+cd $TEMP/$VARIANT
 #Create zip file wirh 9 level comprssion
-zip -r9 "$TEMP/BootloaderChanger-$variant-nevax-$version-unsigned.zip" *
-cd $TEMP
+zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
+#Copy tools needed for building
+cp $LOCALDIR/tools/SignApk/* $TEMP/$VARIANT
 #Sign the zip file and change the name
-java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$variant-nevax-$version-unsigned.zip" "BLChanger-$variant-nevax-$version-signed.zip"
-#Move the zip file to upload dir
-mv "$TEMP/BLChanger-$variant-nevax-$version-signed.zip" "$UPLOAD/BootloaderChanger-$variant-nevax-/"
+java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" "BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
 #Create md5 on Uploader folder
-md5sum "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip" > "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip.md5"
+md5sum "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" > "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+# Move to output/upload dir
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+#Remove tmp files
+rm -R $TEMP/$VARIANT
+rm "*-unsigned.zip"
+
 #BLABLA same BLABLA ...
 
-variant=d801
+VARIANT=d801
 
-cd "$GITHUBPATH/BootloaderChanger-$variant-nevax-/"
-zip -r9 "$TEMP/BootloaderChanger-$variant-nevax-$version-unsigned.zip" *
-cd $TEMP
-java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$variant-nevax-$version-unsigned.zip" "BLChanger-$variant-nevax-$version-signed.zip"
-mv "$TEMP/BLChanger-$variant-nevax-$version-signed.zip" "$UPLOAD/BootloaderChanger-$variant-nevax-/"
-md5sum "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip" > "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip.md5"
+#Make directories for VARIANT in tmp
+mkdir $TEMP/$VARIANT
+#Copy META-INF folder to tmp/$varaint
+cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
+#Copy binaries to TEMP folder
+cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+#
+cd $TEMP/$VARIANT
+#Create zip file wirh 9 level comprssion
+zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
+#Copy tools needed for building
+cp $LOCALDIR/tools/SignApk/* $TEMP/$VARIANT
+#Sign the zip file and change the name
+java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" "BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+#Create md5 on Uploader folder
+md5sum "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" > "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+# Move to output/upload dir
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+#Remove tmp files
+rm -R $TEMP/$VARIANT
+rm "*-unsigned.zip"
 
-variant=d802
-
-cd "$GITHUBPATH/BootloaderChanger-$variant-nevax-/"
-zip -r9 "$TEMP/BootloaderChanger-$variant-nevax-$version-unsigned.zip" *
-cd $TEMP
-java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$variant-nevax-$version-unsigned.zip" "BLChanger-$variant-nevax-$version-signed.zip"
-mv "$TEMP/BLChanger-$variant-nevax-$version-signed.zip" "$UPLOAD/BootloaderChanger-$variant-nevax-/"
-md5sum "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip" > "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip.md5"
-
-
-variant=d803
-
-cd "$GITHUBPATH/BootloaderChanger-$variant-nevax-/"
-zip -r9 "$TEMP/BootloaderChanger-$variant-nevax-$version-unsigned.zip" *
-cd $TEMP
-java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$variant-nevax-$version-unsigned.zip" "BLChanger-$variant-nevax-$version-signed.zip"
-mv "$TEMP/BLChanger-$variant-nevax-$version-signed.zip" "$UPLOAD/BootloaderChanger-$variant-nevax-/"
-md5sum "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip" > "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip.md5"
-
-variant=d805
-
-cd "$GITHUBPATH/BootloaderChanger-$variant-nevax-/"
-zip -r9 "$TEMP/BootloaderChanger-$variant-nevax-$version-unsigned.zip" *
-cd $TEMP
-java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$variant-nevax-$version-unsigned.zip" "BLChanger-$variant-nevax-$version-signed.zip"
-mv "$TEMP/BLChanger-$variant-nevax-$version-signed.zip" "$UPLOAD/BootloaderChanger-$variant-nevax-/"
-md5sum "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip" > "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip.md5"
-
-variant=d806
-
-cd "$GITHUBPATH/BootloaderChanger-$variant-nevax-/"
-zip -r9 "$TEMP/BootloaderChanger-$variant-nevax-$version-unsigned.zip" *
-cd $TEMP
-java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$variant-nevax-$version-unsigned.zip" "BLChanger-$variant-nevax-$version-signed.zip"
-mv "$TEMP/BLChanger-$variant-nevax-$version-signed.zip" "$UPLOAD/BootloaderChanger-$variant-nevax-/"
-md5sum "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip" > "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip.md5"
-
-variant=F320K
-
-cd "$GITHUBPATH/BootloaderChanger-$variant-nevax-/"
-zip -r9 "$TEMP/BootloaderChanger-$variant-nevax-$version-unsigned.zip" *
-cd $TEMP
-java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$variant-nevax-$version-unsigned.zip" "BLChanger-$variant-nevax-$version-signed.zip"
-mv "$TEMP/BLChanger-$variant-nevax-$version-signed.zip" "$UPLOAD/BootloaderChanger-$variant-nevax-/"
-md5sum "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip" > "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip.md5"
-
-
-variant=F320L
-
-cd "$GITHUBPATH/BootloaderChanger-$variant-nevax-/"
-zip -r9 "$TEMP/BootloaderChanger-$variant-nevax-$version-unsigned.zip" *
-cd $TEMP
-java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$variant-nevax-$version-unsigned.zip" "BLChanger-$variant-nevax-$version-signed.zip"
-mv "$TEMP/BLChanger-$variant-nevax-$version-signed.zip" "$UPLOAD/BootloaderChanger-$variant-nevax-/"
-md5sum "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip" > "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip.md5"
-
-variant=F320S
-
-cd "$GITHUBPATH/BootloaderChanger-$variant-nevax-/"
-zip -r9 "$TEMP/BootloaderChanger-$variant-nevax-$version-unsigned.zip" *
-cd $TEMP
-java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$variant-nevax-$version-unsigned.zip" "BLChanger-$variant-nevax-$version-signed.zip"
-mv "$TEMP/BLChanger-$variant-nevax-$version-signed.zip" "$UPLOAD/BootloaderChanger-$variant-nevax-/"
-md5sum "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip" > "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip.md5"
-
-
-variant=vs980
-
-cd "$GITHUBPATH/BootloaderChanger-$variant-nevax-/"
-zip -r9 "$TEMP/BootloaderChanger-$variant-nevax-$version-unsigned.zip" *
-cd $TEMP
-java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$variant-nevax-$version-unsigned.zip" "BLChanger-$variant-nevax-$version-signed.zip"
-mv "$TEMP/BLChanger-$variant-nevax-$version-signed.zip" "$UPLOAD/BootloaderChanger-$variant-nevax-/"
-md5sum "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip" > "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip.md5"
-
-
-variant=ls980
-
-cd "$GITHUBPATH/BootloaderChanger-$variant-nevax-/"
-zip -r9 "$TEMP/BootloaderChanger-$variant-nevax-$version-unsigned.zip" *
-cd $TEMP
-java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$variant-nevax-$version-unsigned.zip" "BLChanger-$variant-nevax-$version-signed.zip"
-mv "$TEMP/BLChanger-$variant-nevax-$version-signed.zip" "$UPLOAD/BootloaderChanger-$variant-nevax-/"
-md5sum "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip" > "$UPLOAD/BootloaderChanger-$variant-nevax-/BLChanger-$variant-nevax-$version-signed.zip.md5"
+#BLABLA same BLABLA ...
 
 
 
-rm $TEMP/*
-rm -r $TEMP/*
-rm -r $TEMP
+VARIANT=d802
+#Make directories for VARIANT in tmp
+mkdir $TEMP/$VARIANT
+#Copy META-INF folder to tmp/$varaint
+cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
+#Copy binaries to TEMP folder
+cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+#
+cd $TEMP/$VARIANT
+#Create zip file wirh 9 level comprssion
+zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
+#Copy tools needed for building
+cp $LOCALDIR/tools/SignApk/* $TEMP/$VARIANT
+#Sign the zip file and change the name
+java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" "BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+#Create md5 on Uploader folder
+md5sum "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" > "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+# Move to output/upload dir
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+#Remove tmp files
+rm -R $TEMP/$VARIANT
+rm "*-unsigned.zip"
+
+#BLABLA same BLABLA ...
+
+
+
+VARIANT=d803
+#Make directories for VARIANT in tmp
+mkdir $TEMP/$VARIANT
+#Copy META-INF folder to tmp/$varaint
+cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
+#Copy binaries to TEMP folder
+cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+#
+cd $TEMP/$VARIANT
+#Create zip file wirh 9 level comprssion
+zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
+#Copy tools needed for building
+cp $LOCALDIR/tools/SignApk/* $TEMP/$VARIANT
+#Sign the zip file and change the name
+java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" "BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+#Create md5 on Uploader folder
+md5sum "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" > "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+# Move to output/upload dir
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+#Remove tmp files
+rm -R $TEMP/$VARIANT
+rm "*-unsigned.zip"
+
+#BLABLA same BLABLA ...
+
+
+VARIANT=d805
+#Make directories for VARIANT in tmp
+mkdir $TEMP/$VARIANT
+#Copy META-INF folder to tmp/$varaint
+cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
+#Copy binaries to TEMP folder
+cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+#
+cd $TEMP/$VARIANT
+#Create zip file wirh 9 level comprssion
+zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
+#Copy tools needed for building
+cp $LOCALDIR/tools/SignApk/* $TEMP/$VARIANT
+#Sign the zip file and change the name
+java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" "BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+#Create md5 on Uploader folder
+md5sum "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" > "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+# Move to output/upload dir
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+#Remove tmp files
+rm -R $TEMP/$VARIANT
+rm "*-unsigned.zip"
+
+#BLABLA same BLABLA ...
+
+
+VARIANT=d806
+#Make directories for VARIANT in tmp
+mkdir $TEMP/$VARIANT
+#Copy META-INF folder to tmp/$varaint
+cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
+#Copy binaries to TEMP folder
+cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+#
+cd $TEMP/$VARIANT
+#Create zip file wirh 9 level comprssion
+zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
+#Copy tools needed for building
+cp $LOCALDIR/tools/SignApk/* $TEMP/$VARIANT
+#Sign the zip file and change the name
+java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" "BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+#Create md5 on Uploader folder
+md5sum "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" > "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+# Move to output/upload dir
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+#Remove tmp files
+rm -R $TEMP/$VARIANT
+rm "*-unsigned.zip"
+
+#BLABLA same BLABLA ...
+
+
+VARIANT=F320K
+#Make directories for VARIANT in tmp
+mkdir $TEMP/$VARIANT
+#Copy META-INF folder to tmp/$varaint
+cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
+#Copy binaries to TEMP folder
+cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+#
+cd $TEMP/$VARIANT
+#Create zip file wirh 9 level comprssion
+zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
+#Copy tools needed for building
+cp $LOCALDIR/tools/SignApk/* $TEMP/$VARIANT
+#Sign the zip file and change the name
+java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" "BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+#Create md5 on Uploader folder
+md5sum "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" > "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+# Move to output/upload dir
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+#Remove tmp files
+rm -R $TEMP/$VARIANT
+rm "*-unsigned.zip"
+
+#BLABLA same BLABLA ...
+
+
+
+VARIANT=F320L
+#Make directories for VARIANT in tmp
+mkdir $TEMP/$VARIANT
+#Copy META-INF folder to tmp/$varaint
+cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
+#Copy binaries to TEMP folder
+cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+#
+cd $TEMP/$VARIANT
+#Create zip file wirh 9 level comprssion
+zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
+#Copy tools needed for building
+cp $LOCALDIR/tools/SignApk/* $TEMP/$VARIANT
+#Sign the zip file and change the name
+java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" "BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+#Create md5 on Uploader folder
+md5sum "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" > "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+# Move to output/upload dir
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+#Remove tmp files
+rm -R $TEMP/$VARIANT
+rm "*-unsigned.zip"
+
+#BLABLA same BLABLA ...
+
+
+
+VARIANT=F320S
+#Make directories for VARIANT in tmp
+mkdir $TEMP/$VARIANT
+#Copy META-INF folder to tmp/$varaint
+cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
+#Copy binaries to TEMP folder
+cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+#
+cd $TEMP/$VARIANT
+#Create zip file wirh 9 level comprssion
+zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
+#Copy tools needed for building
+cp $LOCALDIR/tools/SignApk/* $TEMP/$VARIANT
+#Sign the zip file and change the name
+java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" "BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+#Create md5 on Uploader folder
+md5sum "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" > "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+# Move to output/upload dir
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+#Remove tmp files
+rm -R $TEMP/$VARIANT
+rm "*-unsigned.zip"
+
+#BLABLA same BLABLA ...
+
+
+
+VARIANT=vs980
+#Make directories for VARIANT in tmp
+mkdir $TEMP/$VARIANT
+#Copy META-INF folder to tmp/$varaint
+cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
+#Copy binaries to TEMP folder
+cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+#
+cd $TEMP/$VARIANT
+#Create zip file wirh 9 level comprssion
+zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
+#Copy tools needed for building
+cp $LOCALDIR/tools/SignApk/* $TEMP/$VARIANT
+#Sign the zip file and change the name
+java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" "BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+#Create md5 on Uploader folder
+md5sum "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" > "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+# Move to output/upload dir
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+#Remove tmp files
+rm -R $TEMP/$VARIANT
+rm "*-unsigned.zip"
+
+#BLABLA same BLABLA ...
+
+
+
+
+VARIANT=ls980
+#Make directories for VARIANT in tmp
+mkdir $TEMP/$VARIANT
+#Copy META-INF folder to tmp/$varaint
+cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
+#Copy binaries to TEMP folder
+cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+#
+cd $TEMP/$VARIANT
+#Create zip file wirh 9 level comprssion
+zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
+#Copy tools needed for building
+cp $LOCALDIR/tools/SignApk/* $TEMP/$VARIANT
+#Sign the zip file and change the name
+java -jar signapk.jar testkey.x509.pem testkey.pk8 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" "BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+#Create md5 on Uploader folder
+md5sum "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" > "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+# Move to output/upload dir
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip"
+mv "BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5" $UPLOAD/"BLChanger-$VARIANT-nevax-$VERSION-signed.zip.md5"
+#Remove tmp files
+rm -R $TEMP/$VARIANT
+rm "*-unsigned.zip"
+
+#BLABLA same BLABLA ...
+
+
+echo -------------------------------------------------------
+ls -l $UPLOAD
+echo -------------------------------------------------------
+echo -en '\n'
+echo -en '\n'
+echo Finish
+echo "Press <Enter> to leave"
+read touche
+case $touche in
+*)	echo "++"
+	;;
+esac

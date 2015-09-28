@@ -1,0 +1,90 @@
+﻿################################################## #######
+# Bootloader Changer language file
+#
+# Portuguese by: Rayaxe
+#
+# Some things like "welcome.version" and so I didn't translate because we portuguese don't translate development terms to our language. I will put in the end the translation for those words if you want to use it but I don't recoment it
+#
+
+text_ok=Ok
+text_next=Próximo
+text_back=Anterior
+text_yes=Sim
+text_no=Não
+text_about=Sobre
+text_calibrating=Ferramentas de calibração
+text_quit=Abortar instalação
+text_quit_msg=Tem a certeza que pretende abortar a instalação?
+
+welcome.title=Bem vindo
+welcome.text1=Está prestes a usar
+welcome.version=VERSION
+welcome.codename=CODENAME
+welcome.updated=UDPATED
+welcome.next=Pressione "Próximo" para continuar a instalação...
+
+changelog.title=Changelogs
+changelog.desc=Bootloader Changer Changelogs
+language.title=Seleção de linguagem
+language.text=Escolha a linguagem de instalação
+language.english=English
+language.english.info=Using english
+language.french=Français
+language.french.info=Utiliser le Français
+language.portuguese=Português
+language.portuguese.info=Usar português
+welcome.microblog=Youtube
+rom.data=31 Julho 2015
+text_finish=Concluído
+model.title=Modelo do dispositivo
+
+by=por
+
+main.tittle=Por favor selecione uma opção do menu abaixo para dar inicio à instalação
+main.install=Instalar
+main.install.info=Continuar a instalar mod
+main.sys=Informação do sistema
+main.sys.info=Mostrar informações do dispositivo
+main.changelog.info=Bootloader Changer changelogs
+main.exit=Sair
+main.exit.info=Sair do instalador do Bootloader Changer
+main.guide=Que bootloader devo instalar?
+main.guide.info=Guia rápido
+
+sys.title=Informação de Bootloader Changer
+sys.info.wait=Obter informações de sistema...
+sys.info.title=Informações de sistema
+sys.info.title2=Informações do teu dispositivo.
+sys.info.model=Modelo
+sys.info.name=Nome
+sys.info.manu=Fabricante
+sys.info.cpu=CPU
+sys.info.lcd=Densidade de LCD
+sys.info.storage=Tamanho do armazenamento
+sys.info.storage.free=Livre
+
+bl.tittle=Versão de Bootloader
+bl.title2=Por favor selecione a sua versão de Bootloader.
+
+rcv.tittle=Instalar TWRP 2.8.7.1 recovery Bumped!
+rcv.tittle2=Recovery de blastagator
+rcv1=Instalar TWRP Bumped!
+rcv2=É importante que tenha sempre a última versão
+
+pre.install.title=Pronto para instalar
+pre.install=O programa está pronto para começar a instalação.
+pre.install2=Pressione <b>Instalar agora</b> para dar inicio à instalação.
+pre.install3=Se quiser rever ou alterar alguma configuração de instalação, pressione <b>Anterior</b>.
+warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>
+warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>
+
+install=A instalar
+install.now=Instalar agora
+install.finish=O Bootloader Changer foi instalado com sucesso no seu dispositivo. Pressione SEGUINTE para continuar.
+install.finish.title=A instalação foi concluída.
+installing.title=A instalar...
+finish.title=Parabéns!
+finish.msg=O Bootloader Changer foi instalado com sucesso no seu dispositivo.
+finish.msg2=Não se esqueça de reiniciar para o recovery se desejar instalar uma nova rom!
+finish.status=Resultado da instalação:
+finish.reboot=Reinicie o seu dispositivo agora.

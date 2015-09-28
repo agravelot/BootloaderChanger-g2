@@ -1,0 +1,90 @@
+﻿################################################## #######
+#	Bootloader Changer language file
+#
+#	Czech by : k0s&n
+#
+#
+#
+
+text_ok=OK
+text_next=Další
+text_back=Zpět
+text_yes=Ano
+text_no=Ne
+text_about=O
+text_calibrating=Nástroje pro kalibraci
+text_quit=Opustit instalaci
+text_quit_msg=Opravdu chcete zrušit instalaci?
+
+welcome.title=Vítejte
+welcome.text1=You are about to use
+welcome.version=VERZE
+welcome.codename=CODENAME
+welcome.updated=UPDATOVÁNO
+welcome.next=Stiskněte Další pro pokračování
+
+changelog.title=Changelogy
+changelog.desc=Bootloader Changer Changelogs
+language.title=Výběr jazyka
+language.text=Vyberte instalační jazyk
+language.english=English
+language.english.info=Using English
+language.french=France
+language.french.info=Utiliser le Français
+language.czech = Čeština
+language.czech.info = Použití češtiny
+welcome.microblog=Youtube
+rom.data=17 červenec 2015
+text_finish=Konec
+model.title=Model
+
+by=by
+
+main.tittle=Vyberte v menu pod tím, pro instalaci
+main.install=Instalovat
+main.install.info=Pokračovat v instalaci modu
+main.sys=System Info
+main.sys.info=Ukaž informace o zařízení
+main.changelog.info=Bootloader Changer changelogs
+main.exit=Konec
+main.exit.info=Odejít z bootloaderchangeru
+main.guide=Jaký bootloader bych měl mít?
+main.guide.info=Malá příručka
+
+sys.title=Bootloader Changer Information
+sys.info.wait=Stáhni systémové informace...
+sys.info.title=Informace o systému
+sys.info.title2=Informace o systému Vašeho telefonu.
+sys.info.model=Model
+sys.info.name=Jméno
+sys.info.manu=Výrobce
+sys.info.cpu=CPU
+sys.info.lcd=Rozlišení
+sys.info.storage=Velikost úložiště
+sys.info.storage.free=Volné
+
+bl.tittle=Varianta bootloaderu
+bl.title2=Vyberte variantu bootloaderu.
+
+rcv.tittle=Nainstalovat TWRP 2.8.7.1 recovery Bumped!
+rcv.tittle2=Recovery by blastagator
+rcv1=Install TWRP Bumped!
+rcv2=Je důležité mít poslední verzi TWRP
+
+pre.install.title=Připraven instalovat
+pre.install=Můžeme začít,
+pre.install2=Stiskni <b>Instalovat</b> pro spuštění instalace.
+pre.install3=Pokud chcete změnit nastavení stiskněte <b>Zpět</b>.
+warning1=<b>If you have custom recovery or custom kernel. NEVER EVER!!! install Original LP bootloader!</b>
+warning2=<b>Device BRICK is one SEC! then you will loose every thing! and will have to use download mode to install all STOCK, and start again!</b>
+
+install=Instaluji
+install.now=Instalovat
+install.finish=Instalace úspěšná, stiskni Další.
+install.finish.title=Instalace dokončena.
+installing.title=Instaluji...
+finish.title=Gratuluji!
+finish.msg=Bootloader changer se nainstaloval úspěšně.
+finish.msg2=Nezapomeňte se vrátit při rebootu do recovery, pokud chcete instalovat novou ROM.
+finish.status=Výsledky instalace:
+finish.reboot=Restartujte své zařízení.
