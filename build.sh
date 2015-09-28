@@ -62,7 +62,7 @@ echo -en '\n'
 echo -en '\n'
 
 #Clean tmp folder
-rm -R $TEMP/*
+rm -R $TEMP/*.*
 
 
 #Set VARIANT
