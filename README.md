@@ -12,19 +12,14 @@ Update it for all variants would be PERFECT !
 
 KDZ :
 
-Variant   | JellyBean         | KitKat             | Lollipop            | 
+Variant   | JellyBean         | KitKat             | Lollipop            |
 ---------:|:-----------------:|:------------------:|:-------------------:|
-D800      |        	          |                    |          		       | 
+D800      |        	          |                    |          		       |
 D801      |         11B       |        20E         |        30B		    	 | 
-D802      |       	10C	      |        20H         |        30D	  	  	 |
-D803      |       	10D*      |        20H*        |        ----   		   | 
-D805      |       	10C	      |        20H         |        30D	  	  	 |
-D806      |       	10C	      |        20H         |        30D	  	  	 | 
-F320K     |         11E	      |         21W        |        30D	   	   	 | 
-F320L     |         11G	      |         21V        |        30D	    		 | 
-F320S     |         11G	      |         21U        |        30E 	   		 | 
+D802/5/6  |       	10C	      |        20H         |        30D	  	  	 |
+D803      |       	10D*      |        20H*        |        ----   		   |  
+F320x     |         11E	      |        21W         |        30D	   	   	 |
 LS980     |         	   	    |                    |          	 	   		 |
 VS980     |        	   	      |                    |          		   		 |
 
 (*) Not in github, please wait
-
