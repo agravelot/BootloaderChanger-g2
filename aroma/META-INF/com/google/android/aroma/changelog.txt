@@ -3,7 +3,7 @@
 - Remove MD5 in zip, not used
 - Remake all the tree on github
 - Warning only for original Lollipop Bootloader
-- Fix ico recovery step (aroma)
+- Fix icon recovery step (aroma)
 - Regroup :
 	> F320L / F320S / F320K > F320x
 	> D802 / D805 / D806 > D802_5_6
