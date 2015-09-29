@@ -64,7 +64,6 @@ echo -en '\n'
 #Clean tmp folder
 rm -R $TEMP/*.*
 
-
 #Set VARIANT
 VARIANT=d800
 #Make directories for VARIANT in tmp
@@ -73,7 +72,17 @@ mkdir $TEMP/$VARIANT
 cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
 #Copy binaries to TEMP folder
 cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+# Copy assert script
+cp $LOCALDIR/tools/variant/assert-$VARIANT.sh $TEMP/$VARIANT/META-INF/com/google/android/
 #
+cd $TEMP/$VARIANT/META-INF/com/google/android/
+# Start assert script
+bash assert-$VARIANT.sh
+# Sleep 1 second for script
+sleep 1
+# Remove script
+rm assert-$VARIANT.sh
+
 cd $TEMP/$VARIANT
 #Create zip file wirh 9 level comprssion
 zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
@@ -94,13 +103,23 @@ rm "*-unsigned.zip"
 
 VARIANT=d801
 
-#Make directories for VARIANT in tmp
+vs980#Make directories for VARIANT in tmp
 mkdir $TEMP/$VARIANT
 #Copy META-INF folder to tmp/$varaint
 cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
 #Copy binaries to TEMP folder
 cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+# Copy assert script
+cp $LOCALDIR/tools/variant/assert-$VARIANT.sh $TEMP/$VARIANT/META-INF/com/google/android/
 #
+cd $TEMP/$VARIANT/META-INF/com/google/android/
+# Start assert script
+bash assert-$VARIANT.sh
+# Sleep 1 second for script
+sleep 1
+# Remove script
+rm assert-$VARIANT.sh
+
 cd $TEMP/$VARIANT
 #Create zip file wirh 9 level comprssion
 zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
@@ -122,13 +141,23 @@ rm "*-unsigned.zip"
 
 
 VARIANT=d802_5_6
-#Make directories for VARIANT in tmp
+vs980#Make directories for VARIANT in tmp
 mkdir $TEMP/$VARIANT
 #Copy META-INF folder to tmp/$varaint
 cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
 #Copy binaries to TEMP folder
 cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+# Copy assert script
+cp $LOCALDIR/tools/variant/assert-$VARIANT.sh $TEMP/$VARIANT/META-INF/com/google/android/
 #
+cd $TEMP/$VARIANT/META-INF/com/google/android/
+# Start assert script
+bash assert-$VARIANT.sh
+# Sleep 1 second for script
+sleep 1
+# Remove script
+rm assert-$VARIANT.sh
+
 cd $TEMP/$VARIANT
 #Create zip file wirh 9 level comprssion
 zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
@@ -150,13 +179,23 @@ rm "*-unsigned.zip"
 
 
 VARIANT=d803
-#Make directories for VARIANT in tmp
+vs980#Make directories for VARIANT in tmp
 mkdir $TEMP/$VARIANT
 #Copy META-INF folder to tmp/$varaint
 cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
 #Copy binaries to TEMP folder
 cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+# Copy assert script
+cp $LOCALDIR/tools/variant/assert-$VARIANT.sh $TEMP/$VARIANT/META-INF/com/google/android/
 #
+cd $TEMP/$VARIANT/META-INF/com/google/android/
+# Start assert script
+bash assert-$VARIANT.sh
+# Sleep 1 second for script
+sleep 1
+# Remove script
+rm assert-$VARIANT.sh
+
 cd $TEMP/$VARIANT
 #Create zip file wirh 9 level comprssion
 zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
@@ -178,13 +217,23 @@ rm "*-unsigned.zip"
 
 
 VARIANT=F320x
-#Make directories for VARIANT in tmp
+vs980#Make directories for VARIANT in tmp
 mkdir $TEMP/$VARIANT
 #Copy META-INF folder to tmp/$varaint
 cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
 #Copy binaries to TEMP folder
 cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+# Copy assert script
+cp $LOCALDIR/tools/variant/assert-$VARIANT.sh $TEMP/$VARIANT/META-INF/com/google/android/
 #
+cd $TEMP/$VARIANT/META-INF/com/google/android/
+# Start assert script
+bash assert-$VARIANT.sh
+# Sleep 1 second for script
+sleep 1
+# Remove script
+rm assert-$VARIANT.sh
+
 cd $TEMP/$VARIANT
 #Create zip file wirh 9 level comprssion
 zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
@@ -205,13 +254,23 @@ rm "*-unsigned.zip"
 
 
 VARIANT=vs980
-#Make directories for VARIANT in tmp
+vs980#Make directories for VARIANT in tmp
 mkdir $TEMP/$VARIANT
 #Copy META-INF folder to tmp/$varaint
 cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
 #Copy binaries to TEMP folder
 cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+# Copy assert script
+cp $LOCALDIR/tools/variant/assert-$VARIANT.sh $TEMP/$VARIANT/META-INF/com/google/android/
 #
+cd $TEMP/$VARIANT/META-INF/com/google/android/
+# Start assert script
+bash assert-$VARIANT.sh
+# Sleep 1 second for script
+sleep 1
+# Remove script
+rm assert-$VARIANT.sh
+
 cd $TEMP/$VARIANT
 #Create zip file wirh 9 level comprssion
 zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
@@ -234,13 +293,23 @@ rm "*-unsigned.zip"
 
 
 VARIANT=ls980
-#Make directories for VARIANT in tmp
+vs980#Make directories for VARIANT in tmp
 mkdir $TEMP/$VARIANT
 #Copy META-INF folder to tmp/$varaint
 cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
 #Copy binaries to TEMP folder
 cp -R $LOCALDIR/bin/$VARIANT/nevax $TEMP/$VARIANT
+# Copy assert script
+cp $LOCALDIR/tools/variant/assert-$VARIANT.sh $TEMP/$VARIANT/META-INF/com/google/android/
 #
+cd $TEMP/$VARIANT/META-INF/com/google/android/
+# Start assert script
+bash assert-$VARIANT.sh
+# Sleep 1 second for script
+sleep 1
+# Remove script
+rm assert-$VARIANT.sh
+
 cd $TEMP/$VARIANT
 #Create zip file wirh 9 level comprssion
 zip -r9 "BootloaderChanger-$VARIANT-nevax-$VERSION-unsigned.zip" *
