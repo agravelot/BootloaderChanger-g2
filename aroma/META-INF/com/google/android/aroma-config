@@ -10,7 +10,7 @@ loadlang("langs/en.lang");
 ini_set("rom_name", "Bootloader Changer");
 ini_set("rom_version", "2.3.2");
 ini_set("rom_author", "Nevax - xda@NevaX1");
-#Set by script 
+#Set by script
 ini_set("rom_date", "29th September 2015");
 
 #Font
@@ -146,13 +146,13 @@ if prop("menu.prop", "selected")=="3" then
 
 		"<~sys.info.model>\t\t\t: <b><#selectbg_g>" + sysprop("ro.product.model") + "</#></b>\n" +
 		"<~sys.info.name>\t\t\t: <b><#selectbg_g>" + sysprop("ro.product.name") + "</#></b>\n" +
-		"<~sys.info.manu>\t\t: <b><#selectbg_g>" + sysprop("ro.product.manufacturer") + "</#></b>\n\n" +
+		"<~sys.info.manu>\t: <b><#selectbg_g>" + sysprop("ro.product.manufacturer") + "</#></b>\n\n" +
 
-		"<~sys.info.cpu>\t\t\t\t: <b><#selectbg_g>" + sysprop("ro.product.cpu.abi") + "</#></b>\n" +
+		"<~sys.info.cpu>\t\t\t: <b><#selectbg_g>" + sysprop("ro.product.cpu.abi") + "</#></b>\n" +
 		"<~sys.info.lcd>\t\t: <b><#selectbg_g>" + sysprop("ro.sf.lcd_density") + "</#></b>\n\n" +
 
 		"<~sys.info.storage>\t\t: <b><#selectbg_g>" + getdisksize("/system", "m") + " MB</#></b>\n" +
-			"\t\t<~sys.info.storage.free>\t\t: <b><#selectbg_g>" + getdiskfree("/system", "m") + " MB</#></b>\n\n"
+			"\t\t<~sys.info.storage.free>\t: <b><#selectbg_g>" + getdiskfree("/system", "m") + " MB</#></b>\n\n"
 		);
 
 	textbox(
