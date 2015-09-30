@@ -66,6 +66,9 @@ rm -R $TEMP/*.*
 
 #Set VARIANT
 VARIANT=d800
+echo -----------------------------
+echo $VARIANT
+echo -----------------------------
 #Make directories for VARIANT in tmp
 mkdir $TEMP/$VARIANT
 #Copy META-INF folder to tmp/$varaint
@@ -102,8 +105,10 @@ rm "*-unsigned.zip"
 #BLABLA same BLABLA ...
 
 VARIANT=d801
-
-vs980#Make directories for VARIANT in tmp
+echo -----------------------------
+echo $VARIANT
+echo -----------------------------
+#Make directories for VARIANT in tmp
 mkdir $TEMP/$VARIANT
 #Copy META-INF folder to tmp/$varaint
 cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
@@ -141,7 +146,10 @@ rm "*-unsigned.zip"
 
 
 VARIANT=d802_5_6
-vs980#Make directories for VARIANT in tmp
+echo -----------------------------
+echo $VARIANT
+echo -----------------------------
+#Make directories for VARIANT in tmp
 mkdir $TEMP/$VARIANT
 #Copy META-INF folder to tmp/$varaint
 cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
@@ -179,7 +187,10 @@ rm "*-unsigned.zip"
 
 
 VARIANT=d803
-vs980#Make directories for VARIANT in tmp
+echo -----------------------------
+echo $VARIANT
+echo -----------------------------
+#Make directories for VARIANT in tmp
 mkdir $TEMP/$VARIANT
 #Copy META-INF folder to tmp/$varaint
 cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
@@ -217,7 +228,10 @@ rm "*-unsigned.zip"
 
 
 VARIANT=F320x
-vs980#Make directories for VARIANT in tmp
+echo -----------------------------
+echo $VARIANT
+echo -----------------------------
+#Make directories for VARIANT in tmp
 mkdir $TEMP/$VARIANT
 #Copy META-INF folder to tmp/$varaint
 cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
@@ -254,7 +268,10 @@ rm "*-unsigned.zip"
 
 
 VARIANT=vs980
-vs980#Make directories for VARIANT in tmp
+echo -----------------------------
+echo $VARIANT
+echo -----------------------------
+#Make directories for VARIANT in tmp
 mkdir $TEMP/$VARIANT
 #Copy META-INF folder to tmp/$varaint
 cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
@@ -289,11 +306,11 @@ rm "*-unsigned.zip"
 
 #BLABLA same BLABLA ...
 
-
-
-
 VARIANT=ls980
-vs980#Make directories for VARIANT in tmp
+echo -----------------------------
+echo $VARIANT
+echo -----------------------------
+#Make directories for VARIANT in tmp
 mkdir $TEMP/$VARIANT
 #Copy META-INF folder to tmp/$varaint
 cp -R $LOCALDIR/aroma/META-INF $TEMP/$VARIANT
