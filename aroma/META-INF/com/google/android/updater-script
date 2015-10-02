@@ -14,8 +14,8 @@ ui_print(" ");
 if
 	(file_getprop("/tmp/aroma/bootloader.prop", "selected.2")=="1")
 then
-## 17 : Added by ./tools/variant/*.sh
-## 18 : Added by ./tools/variant/*.sh
+#17:AddedByScript
+#18:AddedByScript
 endif;
 ui_print(" ");
 ui_print(" ");

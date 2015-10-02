@@ -10,7 +10,7 @@ loadlang("langs/en.lang");
 ini_set("rom_name", "Bootloader Changer");
 ini_set("rom_version", "2.3.2");
 ini_set("rom_author", "Nevax - xda@NevaX1");
-#Set by script
+#SetByScript
 ini_set("rom_date", "29th September 2015");
 
 #Font
